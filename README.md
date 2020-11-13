@@ -1,1 +1,1 @@
-#SLDS - Student Life Department System Repository
+SLDS - Student Life Department System Repository
