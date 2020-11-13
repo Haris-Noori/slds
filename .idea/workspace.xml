@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e2c6871d-d39f-41e2-b731-a524dee73cc2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SLDS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/add-student.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/add-teacher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/add_class.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin-dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/admin_login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/modify_class.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/modify_student.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/modify_tutor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/myclasses_tutor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/operator-dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/register_participant.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/simple-sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/student-login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/student_dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/teacherlogin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/tutor_dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/tutor_header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/BG.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/card.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/lock_open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/perm_id.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/add_class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/add_student.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/add_student_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/add_tutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/add_tutor_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_foot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_login_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/admin_logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/login_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/modify_class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/modify_student.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/modify_tutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/modify_tutor_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/connect.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slds_db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/cancel_booking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/change_password.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/create_booking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/create_booking_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/modify_booking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/modify_booking_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/modify_booking_try_code.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_foot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_head.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_login_try.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/student_logout.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Haris-Noori" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kF8oFmP2y64tzIipa2eUPusEi7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e2c6871d-d39f-41e2-b731-a524dee73cc2" name="Default Changelist" comment="" />
+      <created>1605285151760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605285151760</updated>
+      <workItem from="1605285152818" duration="2139000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="90" y="225" key="#SQL_Dialects" timestamp="1605287499047">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="90" y="225" key="#SQL_Dialects/62.0.1304.768@62.0.1304.768" timestamp="1605287499047" />
+    <state x="339" y="0" key="CommitChangelistDialog2" timestamp="1605287803818">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="339" y="0" key="CommitChangelistDialog2/62.0.1304.768@62.0.1304.768" timestamp="1605287803818" />
+    <state x="494" y="125" key="FileChooserDialogImpl" timestamp="1605287601340">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="494" y="125" key="FileChooserDialogImpl/62.0.1304.768@62.0.1304.768" timestamp="1605287601340" />
+    <state x="592" y="282" key="Github.ShareDialog" timestamp="1605287585501">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="592" y="282" key="Github.ShareDialog/62.0.1304.768@62.0.1304.768" timestamp="1605287585501" />
+  </component>
+</project>
