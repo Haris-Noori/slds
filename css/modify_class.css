@@ -1,0 +1,19 @@
+body {
+    font-family: 'Audiowide', cursive;
+}
+
+.mynavbar
+{
+    background: orange;
+}
+
+.navbar-brand a
+{
+    color: black;
+}
+
+#table_line
+{
+    width: 500px;
+    background-color: yellowgreen;
+}
