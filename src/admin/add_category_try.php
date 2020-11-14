@@ -10,11 +10,11 @@
     if($con->query($qry))
     {
         $msg = "Tutor Added Successfully!!";
-        header("Location:add_tutor.php?GoodMessage=$msg");
+        header("Location:add_category.php?GoodMessage=$msg");
     }
     else
     {
         $msg="Not Added!!";
-        header("Location:add_tutor.php?BadMessage=$msg");
+        header("Location:add_category.php?BadMessage=$msg");
     }
 ?>

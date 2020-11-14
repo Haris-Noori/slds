@@ -9,11 +9,11 @@
     if($con->query($qry))
     {
         $msg = "Tutor Removed !!";
-        header("Location:modify_tutor.php?GoodMessage=$msg");
+        header("Location:modify_category.php?GoodMessage=$msg");
     }
     else
     {
         $msg="Not Removed!!";
-        header("Location:modify_tutor.php?BadMessage=$msg");
+        header("Location:modify_category.php?BadMessage=$msg");
     }
 ?>

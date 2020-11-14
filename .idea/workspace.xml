@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c6871d-d39f-41e2-b731-a524dee73cc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/habib.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/add-teacher.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin_login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin_login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/modify_tutor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/teacherlogin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/tutor_dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/admin_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/student_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/student_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/add_tutor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/add_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/add_tutor_try.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/add_category_try.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/admin_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/admin_header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/modify_tutor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/modify_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/student_head.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/student_head.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="admin_header.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SLDS/src/admin/admin_header.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.admin_header.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285151760</updated>
       <workItem from="1605285152818" duration="2612000" />
-      <workItem from="1605351775152" duration="5038000" />
+      <workItem from="1605351775152" duration="8234000" />
     </task>
     <servers />
   </component>
