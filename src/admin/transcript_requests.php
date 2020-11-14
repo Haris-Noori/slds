@@ -6,16 +6,16 @@
 <html lang="en">
 
 <head>
-    <title>Modify Student | Admin</title>
+    <title>Transcript Requests | Admin</title>
 
-    <link rel="stylesheet" href="../../css/modify_student.css">
+    <link rel="stylesheet" href="../../css/transcript_requests.css">
 </head>
 <body>
     <?php include "admin_header.php" ?>
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Modify Student</h1>
+                <h1 class="mt-4">Transcript Requests</h1>
 
                 <div class="container">
                     <div class="row">
