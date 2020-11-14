@@ -20,11 +20,11 @@
     <nav class="navbar mynav">
         <div class="mydiv">
             <a id="techvalley" href="../../index.php">
-                GYM
+                Student Life Department System
             </a>
             <ul>
-                <li>Home</li>
-                <li>Team</li>
+                <li><a class="text-white" href="../../index.php">Home</a></li>
+                <li><a class="text-white" href="../student/student_login.php">Student</a></li>
                 <li>About</li>
             </ul>
         </div>
@@ -40,16 +40,16 @@
 
                 <div class="form group-row">
                     <span><img src="../../img/perm_id.png"></span>
-                    <input placeholder="Admin Name" type="text" name="input_name" class="form-control col-sm-4" required>
+                    <input placeholder="Admin ID" type="number" name="" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">
                     <span><img src="../../img/lock_open.png"></span>
-                    <input placeholder="Admin Password" type="password" name="input_pass" class="form-control col-sm-4" required>
+                    <input placeholder="Admin Password" type="password" name="" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">
-                    <button type="submit" class="form-control col-sm-4 btn-warning"><strong>Login</strong></button>
+                    <button type="submit" class="form-control col-sm-4 text-white" style="background: purple"><strong>Login</strong></button>
                 </div>
                 <br>
                 <div class="form group-row">
@@ -69,11 +69,11 @@
     </div>
     <!--PAGE CONTENT ENDS HERE-->
 
-    <footer class="foot" style="background: #020002">
+    <footer class="foot" style="background: purple">
         <div class="row align-center copyright">
             <div class="col-sm-12" align="center" style="color:whitesmoke">
                 <br>
-                <h3>&copy;GYM2020</h3>
+                <h3>&copy;Habib University 2020</h3>
                 <!-- <p><img src="../images/footer.png" id ="img_footer"></span></p> -->
             </div>
         </div>

@@ -2,7 +2,7 @@ body
 {
     font-family: 'Audiowide', cursive;
     /* font-size: 3.0rem; */
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/BG.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../img/habib.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
