@@ -37,7 +37,7 @@
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
                 <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Add New Category</a>
                 <a href="modify_category.php" class="list-group-item list-group-item-action bg-light">Modify Category</a>
-                <a href="add_student.php" class="list-group-item list-group-item-action bg-light">Add New Student</a>
+                <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>
                 <a href="modify_student.php" class="list-group-item list-group-item-action bg-light">Modify Student</a>
                 <a href="add_class.php" class="list-group-item list-group-item-action bg-light">Add New Class</a>
                 <a href="modify_class.php" class="list-group-item list-group-item-action bg-light">Modify Class</a>

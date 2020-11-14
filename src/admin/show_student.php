@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Add Student | Admin</title>
+    <title>Show Student | Admin</title>
 
     <link rel="stylesheet" href="../../css/admin-dashboard.css">
 </head>
@@ -12,48 +12,34 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Add New Student</h1>
+                <h1 class="mt-4">Show Student</h1>
                 
                 <form class="myform" action="add_student_try.php" method="POST">
                     <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="inputEmail4">Student Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Full Name" name="student_name" required>
+                        <div class="form-group col-md-3">
+                            <label for="inputEmail4">Student ID</label>
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="Enter ID" name="" required>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Student Password</label>
-                            <input type="text" class="form-control" id="inputPassword4" placeholder="123" name="student_pass"  required>
+                        <div class="form-group">
+                            <label for="inputEmail4"></label>
+                            <button type="submit" class="btn btn-success">Search</button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-lg">Add</button>
                     <br>
-                    <br>
-                    <div class="form group-row">
-                        <?php
-                            if(isset($_GET["BadMessage"]))
-                            {
-                                echo "<div class='col-sm-4 alert alert-danger'>";
-                                echo $_GET["BadMessage"];
-                                echo "</div>";
-                            }
-                            if(isset($_GET["GoodMessage"]))
-                            {
-                                echo "<div class='col-sm-4 alert alert-success'>";
-                                echo $_GET["GoodMessage"];
-                                echo "</div>";
-                            }
-                        ?>
-                    </div>
                 </form>
 
                 <div class="container">
-                    <h3 class="head3">Existing Students</h3>
+                    <h3 class="head3">Student Record</h3>
 
                     <table class="table mytable">
                         <thead class="thead-dark">
                         <tr>
-                            <th scope="col" style="width: 100px">Student ID</th>
-                            <th scope="col" style="width: 400px">Student Name</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Academic Program</th>
+                            <th scope="col">Induction Year</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
                         </tr>
                         </thead>
                         <?php

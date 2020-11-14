@@ -10,11 +10,11 @@
     if($con->query($qry))
     {
         $msg = "Student Added Successfully!!";
-        header("Location:add_student.php?GoodMessage=$msg");
+        header("Location:show_student.php?GoodMessage=$msg");
     }
     else
     {
         $msg="Not Added!!";
-        header("Location:add_student.php?BadMessage=$msg");
+        header("Location:show_student.php?BadMessage=$msg");
     }
 ?>

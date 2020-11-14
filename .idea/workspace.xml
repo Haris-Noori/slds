@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c6871d-d39f-41e2-b731-a524dee73cc2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/admin-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/add_tutor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/add_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/add_tutor_try.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/add_category_try.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/add_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/show_student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin/add_student_try.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/add_student_try.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/admin/admin_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/admin_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/modify_tutor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/modify_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/student_head.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/student_head.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605285151760</updated>
       <workItem from="1605285152818" duration="2612000" />
-      <workItem from="1605351775152" duration="8234000" />
+      <workItem from="1605351775152" duration="9709000" />
     </task>
     <servers />
   </component>
