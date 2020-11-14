@@ -39,7 +39,7 @@
                 <a href="modify_category.php" class="list-group-item list-group-item-action bg-light">Modify Category</a>
                 <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>
                 <a href="transcript_requests.php" class="list-group-item list-group-item-action bg-light">Transcript Requests</a>
-                <a href="add_class.php" class="list-group-item list-group-item-action bg-light">Add New Class</a>
+                <a href="view_std_record.php" class="list-group-item list-group-item-action bg-light">Add New Class</a>
                 <a href="modify_class.php" class="list-group-item list-group-item-action bg-light">Modify Class</a>
             </div>
         </div>
