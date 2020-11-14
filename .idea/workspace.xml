@@ -2,96 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c6871d-d39f-41e2-b731-a524dee73cc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SLDS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/add-student.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/add-teacher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/add_class.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/admin-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/admin_login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/modify_class.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/modify_student.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/modify_tutor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/myclasses_tutor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/operator-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/register_participant.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/simple-sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/student-login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/student_dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/teacherlogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/tutor_dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/tutor_header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/BG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lock_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/perm_id.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery-3.4.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/add_class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/add_student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/add_student_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/add_tutor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/add_tutor_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_foot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_login_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/admin_logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/login_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/modify_class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/modify_student.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/modify_tutor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/modify_tutor_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/admin/remove_tutor_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/connect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/slds_db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/cancel_booking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/change_password.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/create_booking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/create_booking_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/modify_booking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/modify_booking_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/modify_booking_try_code.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_foot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_head.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_login_try.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/student_logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +46,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605285151760</updated>
-      <workItem from="1605285152818" duration="2139000" />
+      <workItem from="1605285152818" duration="2612000" />
+      <workItem from="1605351775152" duration="2001000" />
     </task>
     <servers />
   </component>
@@ -157,5 +75,13 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="592" y="282" key="Github.ShareDialog/62.0.1304.768@62.0.1304.768" timestamp="1605287585501" />
+    <state x="548" y="307" key="NewPhpFileDialog" timestamp="1605352307772">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="548" y="307" key="NewPhpFileDialog/62.0.1304.768@62.0.1304.768" timestamp="1605352307772" />
+    <state x="306" y="117" key="Vcs.Push.Dialog.v2" timestamp="1605288260141">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="306" y="117" key="Vcs.Push.Dialog.v2/62.0.1304.768@62.0.1304.768" timestamp="1605288260141" />
   </component>
 </project>
