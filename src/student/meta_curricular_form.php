@@ -80,7 +80,8 @@
             {
                 foreach($_FILES['doc']['name'] as $key=>$val)
                 {
-                    move_uploaded_file($_FILES['doc']['tmp_name'][$key],'docs/'.$_SESSION["student"].'/'.$val);
+                    mkdir($_SESSION["student"]);
+                    move_uploaded_file($_FILES['doc']['tmp_name'][$key], $_SESSION["student"].'/'.$val);
                 }
             }
         ?>
