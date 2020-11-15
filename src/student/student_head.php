@@ -1,10 +1,10 @@
 <?php
-/*    session_start();
+    session_start();
     if(!isset($_SESSION["student"]))
     { //if login in session is not set
         header("Location:../../index.php");
     }
-*/?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,9 +55,9 @@
                             <a class="nav-link text-white" href="#">Welcome,<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php /*echo $_SESSION["student"];*/ ?>
+                                <?php echo $_SESSION["student_name"]; ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="my_profile.php">My Profile</a>

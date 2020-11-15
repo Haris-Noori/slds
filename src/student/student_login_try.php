@@ -29,6 +29,7 @@
         if($row["std_password"] == $std_pass)
         {   //password is correct
             $_SESSION["student"] = $std_id;
+            $_SESSION["student_name"] = $row["std_name"];
             //echo $SESSION["user"];
             header("Location:student_dashboard.php");    //give student the access to dashboard
         }

@@ -23,21 +23,21 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Student Email</label>
-                    <input name="" type="email" class="form-control" id="inputEmail4" placeholder="student@email.com">
+                    <input name="std_email" type="email" class="form-control" id="inputEmail4" placeholder="student@email.com">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
                     <label for="">Induction year</label>
-                    <input name="" type="number" class="form-control" id="inputEmail4" placeholder="2020 etc.">
+                    <input name="std_ind_year" type="number" class="form-control" id="inputEmail4" placeholder="2020 etc.">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Phone Number</label>
-                    <input name="" type="text" class="form-control" id="inputEmail4" placeholder="123 456 789">
+                    <input name="std_phone" type="text" class="form-control" id="inputEmail4" placeholder="123 456 789">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="">Academic Program</label>
-                    <input name="" type="text" class="form-control" id="inputEmail4" placeholder="BSCS, BBA, BSIT etc.">
+                    <input name="std_program" type="text" class="form-control" id="inputEmail4" placeholder="BSCS, BBA, BSIT etc.">
                 </div>
             </div>
             <div class="form-row">
