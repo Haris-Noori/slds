@@ -31,7 +31,7 @@
                 </a> </div>
             <div class="list-group list-group-flush">
                 <a href="my_profile.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
-                <a href="add_activity.php" class="list-group-item list-group-item-action bg-light">Add Activity</a>
+                <a href="meta_curricular_form.php" class="list-group-item list-group-item-action bg-light">Meta-Curricular Form</a>
                 <a href="modify_booking.php" class="list-group-item list-group-item-action bg-light">Modify Booking</a>
             </div>
         </div>
