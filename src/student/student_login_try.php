@@ -3,10 +3,10 @@
     include "../connect.php";
 
     
-    $in_name = $_POST["input_name"];
-    $in_pass = $_POST["input_pass"];
+    $std_id = $_POST["std_id"];
+    $std_pass = $_POST["std_password"];
 
-    $qry = "SELECT * FROM students WHERE student_name = '".$in_name."' ";
+    $qry = "SELECT * FROM student WHERE std_id = '".$std_id."' ";
 
     // ----------------------- check if query working
     if($con->query($qry))
@@ -26,9 +26,9 @@
     {   //admin exists
         $row = $res->fetch_assoc();
 
-        if($row["student_pass"] == $in_pass)
+        if($row["std_password"] == $std_pass)
         {   //password is correct
-            $_SESSION["student"] = $in_name;
+            $_SESSION["student"] = $std_id;
             //echo $SESSION["user"];
             header("Location:student_dashboard.php");    //give student the access to dashboard
         }
@@ -40,7 +40,7 @@
     }
     else
     {   //admin does not exist
-        $msg = " ".$in_name." does not exist";
+        $msg = " ".$std_id." does not exist";
         header("Location:student_login.php?Message=$msg");
     }
     
