@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+``<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="../../css/student_dashboard.css">
 </head>
-
 <body>
     <?php include "student_head.php" ?>
             <!-- Student Dashboard Code Start -->
