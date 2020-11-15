@@ -15,12 +15,12 @@
         if($con->query($qry_book_class))
         {
             $msg = "Booking Created Successfully!!";
-            header("Location:create_booking.php?GoodMessage=$msg");
+            header("Location:add_activity.php?GoodMessage=$msg");
         }
         else
         {
             $msg="Boooking Creation Failed! Make sure the class you are going to book is alread exist!";
-            header("Location:create_booking.php?BadMessage=$msg");
+            header("Location:add_activity.php?BadMessage=$msg");
         }
     }
 

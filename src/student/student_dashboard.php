@@ -10,7 +10,7 @@
     <?php include "student_head.php" ?>
             <!-- Student Dashboard Code Start -->
             <div class="container-fluid">
-                <h1 class="mt-4">Welcome, <?php echo $_SESSION["student"]; ?></h1>
+                <h1 class="mt-4">Welcome, <?php /*echo $_SESSION["student"];*/ ?></h1>
 
                 <div class="jumbotron">
                     <div class="container-fluid">

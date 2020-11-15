@@ -1,28 +1,27 @@
 <?php include "../connect.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <title>Modify Booking | Student</title>
-        <link rel="stylesheet" href="../../css/myclasses_tutor.css">
-    </head>
-
+<head>
+    <title>Modify Booking | Student</title>
+    <link rel="stylesheet" href="../../css/my_profile.css">
+</head>
 <body>
 <?php include "student_head.php"; ?>
     <!-- Operator Team Code Start -->
     <div class="container-fluid">
-        <h2 class="mt-4">Create Booking</h2>
+        <h2 class="mt-4">Add New Activity</h2>
 
         <h5 class="mt-4">Enter Class No. to Book</h5>
         <form class="myform" action="create_booking_try.php" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <input name="book_class_id" type="number" class="form-control" id="inputEmail4" placeholder="Class No." required>
+                    <label for="">Activity Name</label>
+                    <input name="" type="text" class="form-control" id="inputEmail4" placeholder="" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <button type="submit" name="btn_create" class="btn btn-success">Book</button>
-                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit" name="btn_create" class="btn col-md-4 btn-success">Book</button>
             </div>
             <div class="form group-row">
                 <?php

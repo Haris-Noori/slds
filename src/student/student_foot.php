@@ -3,11 +3,11 @@
 
     </div>
 
-    <footer class="foot" style="background: #020002">
+    <footer class="foot" style="background: purple">
         <div class="row align-center copyright">
             <div class="col-sm-12" align="center" style="color:whitesmoke">
                 <br>
-                <h3>&copy;GYM2020</h3>
+                <h3>&copy;Habib University 2020</h3>
                 <!-- <p><img src="../images/footer.png" id ="img_footer"></span></p> -->
             </div>
         </div>

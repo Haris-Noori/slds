@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/tutor_header.css">
+    <link rel="stylesheet" href="../../css/student_header.css">
     <link rel="stylesheet" href="../../css/simple-sidebar.css" rel="stylesheet">
 
     <!--FONT LINK-->
@@ -27,11 +27,11 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">
                 <a class="navbar-brand" href="student_dashboard.php">
-                    GYM
+                    Student Life
                 </a> </div>
             <div class="list-group list-group-flush">
-                <a href="change_password.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
-                <a href="create_booking.php" class="list-group-item list-group-item-action bg-light">Create Booking</a>
+                <a href="my_profile.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
+                <a href="add_activity.php" class="list-group-item list-group-item-action bg-light">Add Activity</a>
                 <a href="modify_booking.php" class="list-group-item list-group-item-action bg-light">Modify Booking</a>
             </div>
         </div>
@@ -52,12 +52,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Welcome,<span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-white" href="#">Welcome,<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $_SESSION["student"]; ?>
+                                <?php /*echo $_SESSION["student"];*/ ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="my_profile.php">My Profile</a>

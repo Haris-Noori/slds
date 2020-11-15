@@ -5,7 +5,7 @@
 
 <head>
     <title>My Profile | Operator</title>
-    <link rel="stylesheet" href="../../css/myclasses_tutor.css">
+    <link rel="stylesheet" href="../../css/my_profile.css">
 </head>
 
 <body>

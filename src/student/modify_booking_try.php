@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <title>Modify Booking | Student</title>
-    <link rel="stylesheet" href="../../css/myclasses_tutor.css">
+    <link rel="stylesheet" href="../../css/my_profile.css">
 </head>
 <body>
 <?php include "student_head.php"; ?>
