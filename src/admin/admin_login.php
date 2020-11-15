@@ -40,12 +40,12 @@
 
                 <div class="form group-row">
                     <span><img src="../../img/perm_id.png"></span>
-                    <input placeholder="Admin ID" type="number" name="" class="form-control col-sm-4" required>
+                    <input placeholder="Admin ID" type="number" name="admin_id" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">
                     <span><img src="../../img/lock_open.png"></span>
-                    <input placeholder="Admin Password" type="password" name="" class="form-control col-sm-4" required>
+                    <input placeholder="Admin Password" type="password" name="admin_password" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">

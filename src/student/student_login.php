@@ -40,12 +40,12 @@
 
                 <div class="form group-row">
                     <span><img src="../../img/perm_id.png"></span>
-                    <input placeholder="Student ID" type="number" name="" class="form-control col-sm-4" required>
+                    <input placeholder="Student ID" type="number" name="std_id" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">
                     <span><img src="../../img/lock_open.png"></span>
-                    <input placeholder="Student Password" type="password" name="" class="form-control col-sm-4" required>
+                    <input placeholder="Student Password" type="password" name="std_password" class="form-control col-sm-4" required>
                 </div>
                 <br>
                 <div class="form group-row">
