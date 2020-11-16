@@ -14,7 +14,7 @@
     <?php include "admin_header.php" ?>
         <!-- Admin Dashboard Code Start-->
             <div class="container-fluid">
-                <h1 class="mt-4">Modify Category</h1>
+                <h2 class="mt-4"><u>Modify Category</u></h2>
 
                 <div class="container">
                     <div class="row">
