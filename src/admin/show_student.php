@@ -12,13 +12,13 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Show Student</h1>
+                <h2 class="mt-4"><u>Show Student</u></h2>
                 
                 <form class="myform" action="add_student_try.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Student ID</label>
-                            <input type="number" class="form-control" id="inputEmail4" placeholder="Enter ID" name="" required>
+                            <input type="number" class="form-control border-dark" id="inputEmail4" placeholder="Enter ID" name="" required>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail4"></label>
