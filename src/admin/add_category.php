@@ -18,10 +18,10 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputEmail4">Category Name</label>
-                            <input type="text" class="form-control border-dark" id="inputEmail4" placeholder="Category" name="" required>
+                            <input type="text" class="form-control border-dark" id="inputEmail4" placeholder="Category" name="cat_name" required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-lg">Add</button>
+                    <button type="submit" name="btn-add-cat" class="btn btn-success btn-lg">Add</button>
                     <br>
                     <br>
                     <div class="form group-row">
@@ -48,30 +48,31 @@
                         <table class="table mytable">
                             <thead class="thead-dark">
                             <tr>
+                                <th scope="col" style="width: 100px">Category ID</th>
                                 <th scope="col" style="width: 400px">Category Name</th>
                             </tr>
                             </thead>
                             <?php
-                            /*$qry = " SELECT  ";
+                            $qry = " SELECT * FROM category ";
                             $res = $con->query($qry);
                             $result = "";
                             if($res->num_rows > 0)
                             {
-                            echo "Total Tutors: ".$res->num_rows;
+                            echo "Total Categories: ".$res->num_rows;
                             while($row = $res->fetch_assoc())
                             {
-                            */?><!--
+                            ?>
 
                             <tbody>
                             <tr>
-                                <th scope="row"> <?php /*echo " ".$row["tutor_id"]." " */?> </th>
-                                <td><?php /*echo " ".$row["tutor_name"]." " */?></td>
+                                <td><?php echo " ".$row["cat_id"]." " ?></td>
+                                <td><?php echo " ".$row["cat_name"]." " ?></td>
                             </tr>
 
-                            --><?php
-/*                            }
+                            <?php
                             }
-                            else{echo "No Results Found!!";}*/
+                            }
+                            else{echo "No Results Found!!";}
 
                             //bss yahan tak
                             ?>
