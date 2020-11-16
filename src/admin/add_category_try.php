@@ -1,20 +1,21 @@
 <?php
-
     include "../connect.php";
 
-    $tutor_name = $_POST["tutor_name"];
-    $tutor_pass = $_POST["tutor_pass"];
-
-    $qry = " INSERT INTO tutors(tutor_name, tutor_pass) VALUES ('".$tutor_name."', '".$tutor_pass."') ";
-
-    if($con->query($qry))
+    if(isset($_POST["btn-add-cat"]))
     {
-        $msg = "Tutor Added Successfully!!";
-        header("Location:add_category.php?GoodMessage=$msg");
+        $cat_name = $_POST["cat_name"];
+
+        $qry = " INSERT INTO category(cat_name) VALUES ('".$cat_name."') ";
+
+        if($con->query($qry))
+        {
+            $msg = "New Category Added Successfully!!";
+            header("Location:add_category.php?GoodMessage=$msg");
+        }
+        else
+        {
+            $msg="Category Not Added!!";
+            header("Location:add_category.php?BadMessage=$msg");
+        }
     }
-    else
-    {
-        $msg="Not Added!!";
-        header("Location:add_category.php?BadMessage=$msg");
-    }
-?>
+
