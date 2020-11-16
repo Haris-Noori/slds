@@ -15,7 +15,7 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Transcript Requests</h1>
+                <h2 class="mt-4"><u>Transcript Requests</u></h2>
 
                 <div class="container">
                     <div class="row">
