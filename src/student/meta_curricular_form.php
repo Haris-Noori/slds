@@ -10,14 +10,14 @@
 <?php include "student_head.php"; ?>
     <!-- Operator Team Code Start -->
     <div class="container-fluid">
-        <h2 class="mt-4">Meta-Curricular Form</h2>
+        <h2 class="mt-4"><u>Meta-Curricular Form</u></h2>
 
         <h4 class="mt-4">Add your Activity</h4>
         <form class="myform" action="" method="POST" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="container">
                     <label class="">Choose Category</label>
-                    <select class="form-control col-md-4" name="" id="">
+                    <select class="form-control border-dark col-md-4" name="" id="">
                         <option value=""> -- </option>
                         <option value="">Student Leadership</option>
                         <option value="">Global Engagement</option>
@@ -29,27 +29,27 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Activity Name</label>
-                    <input name="" type="text" class="form-control" id="inputEmail4" placeholder="">
+                    <input name="" type="text" class="form-control border-dark" id="inputEmail4" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Activity Description</label>
-                    <input name="" type="text" class="form-control" id="inputEmail4" placeholder="" >
+                    <input name="" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" >
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Start Date</label>
-                    <input name="" type="date" class="form-control" id="inputEmail4" placeholder="">
+                    <input name="" type="date" class="form-control border-dark" id="inputEmail4" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">End Date</label>
-                    <input name="" type="date" class="form-control" id="inputEmail4" placeholder="" >
+                    <input name="" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-5">
                     <label for="">Upload (Images/Certificates/Documents)</label>
-                    <input type="file" name="doc[]" class="btn btn-primary col-md-12" multiple>
+                    <input type="file" name="doc[]" class="btn btn-primary border-dark col-md-12" multiple>
                 </div>
             </div>
             <div class="form-row">
