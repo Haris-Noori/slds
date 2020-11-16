@@ -14,16 +14,14 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">My Profile</h1>
+                <h2 class="mt-4"><u>My Profile</u></h2>
                 <br>
                 <h5 class="mt-4">You can change your password here</h5>
 
                 <form class="myform" action="" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-4">
-
-                            <input name="input_pass" type="password" class="form-control" id="inputEmail4" placeholder="***">
-
+                            <input name="input_pass" type="password" class="form-control border-dark" id="inputEmail4" placeholder="***">
                         </div>
                         <div class="form-group col-md-4">
                             <button type="submit" name="btn_id" class="btn btn-success">Update</button>
