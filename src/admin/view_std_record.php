@@ -12,7 +12,7 @@
     <!-- Admin Dashboard Code Start-->
 
     <div class="container-fluid">
-        <h1 class="mt-4">View Student Record</h1>
+        <h2 class="mt-4"><u>View Student Record</u></h2>
 
         <div class="row">
             <div class="container">
