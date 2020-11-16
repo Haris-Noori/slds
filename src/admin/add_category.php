@@ -12,13 +12,13 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Add New Category</h1>
+                <h2 class="mt-4"><u>Add New Category</u></h2>
                 
                 <form class="myform" action="add_category_try.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputEmail4">Category Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Category" name="" required>
+                            <input type="text" class="form-control border-dark" id="inputEmail4" placeholder="Category" name="" required>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success btn-lg">Add</button>
