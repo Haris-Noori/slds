@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Modify Booking | Student</title>
+    <title>Meta Curricular Form | Student</title>
     <link rel="stylesheet" href="../../css/my_profile.css">
 </head>
 <body>
@@ -15,13 +15,20 @@
         <h4 class="mt-4">Add your Activity</h4>
         <form class="myform" action="" method="POST" enctype="multipart/form-data">
             <div class="form-row">
-                <div class="container">
+                <div class="col-md-12">
                     <label class="">Choose Category</label>
-                    <select class="form-control border-dark col-md-4" name="" id="">
-                        <option value=""> -- </option>
-                        <option value="">Student Leadership</option>
-                        <option value="">Global Engagement</option>
-                        <option value="">Sports & Recreation</option>
+                    <select name="cat_id" class="form-control border-dark col-md-4" id="">
+                        <option value="NULL"> -- </option>
+                        <?php
+                            $qry_get_cat = " SELECT * FROM category ";
+                            $res = $con->query($qry_get_cat);
+                            while($row = $res->fetch_assoc())
+                            {
+                            ?>
+                                <option value="<?php echo $row["cat_id"] ?>"><?php echo $row["cat_name"] ?></option>
+                            <?php
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -29,21 +36,21 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Activity Name</label>
-                    <input name="" type="text" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="act_name" type="text" class="form-control border-dark" id="inputEmail4" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Activity Description</label>
-                    <input name="" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="act_desc" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" >
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Start Date</label>
-                    <input name="" type="date" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="start_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">End Date</label>
-                    <input name="" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="end_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
                 </div>
             </div>
             <div class="form-row">
@@ -78,10 +85,38 @@
         <?php
             if(isset($_POST["btn_add_activity"]))
             {
-                foreach($_FILES['doc']['name'] as $key=>$val)
+                /*foreach($_FILES['doc']['name'] as $key=>$val)
                 {
                     mkdir($_SESSION["student"]);
                     move_uploaded_file($_FILES['doc']['tmp_name'][$key], $_SESSION["student"].'/'.$val);
+                }*/
+
+                $cat_id = $_POST["cat_id"];
+                $act_name = $_POST["act_name"];
+                $act_desc = $_POST["act_desc"];
+                $start_date = $_POST["start_date"];
+                $end_date = $_POST["end_date"];
+                $std_id = $_SESSION["student"];
+
+                /*echo "Cat ID: ".$cat_id;
+                echo "Act Name: ".$act_name;
+                echo "Act Desc: ".$act_desc;
+                echo "S Date: ".$start_date;
+                echo "E Date: ".$end_date;
+                echo "Std ID: ".$std_id;*/
+
+                $qry_add_act = " INSERT INTO activity(cat_id, std_id, act_name, act_desc, start_date, end_date) 
+                                VALUES('".$cat_id."', '".$std_id."', '".$act_name."', '".$act_desc."', '".$start_date."', '".$end_date."') ";
+
+                if($con->query($qry_add_act))
+                {
+                    echo "New Activity Added!!";
+                    //header("Location:meta_curricular_form.php?GoodMessage=$msg");
+                }
+                else
+                {
+                    echo "Not Added :(";
+                    //header("Location:meta_curricular_form.php?GoodMessage=$msg");
                 }
             }
         ?>
@@ -90,40 +125,37 @@
         <h4>My Activities</h4>
         <table class="table mytable">
             <thead class="thead-dark">
-            <tr>
-                <th scope="col">Category Name</th>
-                <th scope="col">Activity Name</th>
-                <th scope="col">Activity Description</th>
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
-            </tr>
+                <tr>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Activity Name</th>
+                    <th scope="col">Activity Description</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                </tr>
             </thead>
             <?php
 
-            /*$qry = " SELECT class_id, tutor_name, start_date, end_date, start_time, end_time FROM classes,tutors WHERE classes.tutor_id=tutors.tutor_id ";
+            $qry = " SELECT cat_name, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$_SESSION["student"]."' ";
             $res = $con->query($qry);
             $result = "";
 
             if($res->num_rows > 0)
             {
             while($row = $res->fetch_assoc())
-            {*/
+            {
             ?>
-
             <tbody>
-            <tr>
-                <th scope="row"> <?php /*echo " ".$row["class_id"]." "*/ ?> </th>
-                <td><?php /*echo " ".$row["tutor_name"]." "*/ ?></td>
-                <td><?php /*echo " ".$row["start_date"]." "*/ ?></td>
-                <td><?php /*echo " ".$row["end_date"]." "*/ ?></td>
-                <td><?php /*echo " ".$row["start_time"]." "*/ ?></td>
-                <td><?php /*echo " ".$row["end_time"]." "*/ ?></td>
-            </tr>
-
-            <?php/*
+                <tr>
+                    <th><?php echo " ".$row["cat_name"]." " ?></th>
+                    <td><?php echo " ".$row["act_name"]." " ?></td>
+                    <td><?php echo " ".$row["act_desc"]." " ?></td>
+                    <td><?php echo " ".$row["start_date"]." " ?></td>
+                    <td><?php echo " ".$row["end_date"]." " ?></td>
+                </tr>
+            <?php
             }
             }
-            else{echo "No Results Found!!";}*/
+            else{echo "No Results Found!!";}
 
             ?>
             </tbody>
