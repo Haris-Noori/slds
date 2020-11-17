@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2020 at 05:11 PM
+-- Generation Time: Nov 17, 2020 at 05:59 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -44,7 +44,10 @@ CREATE TABLE `activity` (
 
 INSERT INTO `activity` (`act_id`, `cat_id`, `std_id`, `act_name`, `act_desc`, `start_date`, `end_date`) VALUES
 (1, 1, 1, 'Team Head', 'Web & IT Team Head - NUCES ACM', '2019-10-01', '2021-05-10'),
-(2, 1, 2, 'Crew Member', 'Web & IT Team - Habib ACM', '2020-04-01', '2020-11-17');
+(2, 1, 2, 'Crew Member', 'Web & IT Team - Habib ACM', '2020-04-01', '2020-11-17'),
+(3, 3, 1, 'Futsal Head', 'Sports Week 2020', '2020-11-10', '2020-11-21'),
+(11, 0, 1, '', '', '', ''),
+(12, 1, 1, 'Crew Member', 'Graphic Team', '2020-11-04', '2020-11-18');
 
 -- --------------------------------------------------------
 
@@ -144,7 +147,6 @@ CREATE TABLE `transcript` (
 --
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`act_id`),
-  ADD UNIQUE KEY `act_name` (`act_name`),
   ADD KEY `act_cat_id` (`cat_id`),
   ADD KEY `act_std_id` (`std_id`);
 
@@ -186,7 +188,7 @@ ALTER TABLE `transcript`
 -- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `act_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `act_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `admin`
