@@ -40,7 +40,7 @@
             <div class="list-group list-group-flush font-weight-bold">
                 <a href="my_profile.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
                 <a href="meta_curricular_form.php" class="list-group-item list-group-item-action bg-light">Meta-Curricular Form</a>
-                <a href="modify_booking.php" class="list-group-item list-group-item-action bg-light">Modify Booking</a>
+                <a href="student_transcript.php" class="list-group-item list-group-item-action bg-light">My Transcript</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
