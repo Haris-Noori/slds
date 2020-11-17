@@ -1,7 +1,6 @@
 <?php include "../connect.php" ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Show Student | Admin</title>
 
@@ -30,8 +29,7 @@
 
                 <div class="container">
                     <h3 class="head3">Student Record</h3>
-
-                    <table class="table mytable">
+                    <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">ID</th>
@@ -51,10 +49,8 @@
                                 $result = "";
                                 if($res->num_rows > 0)
                                 {
-                                    echo "Total Students: ".$res->num_rows;
                                     while($row = $res->fetch_assoc())
                                     {
-
                         ?>
                         <tbody>
                             <tr>
@@ -75,7 +71,50 @@
                         ?>
                         </tbody>
                     </table>
+
+                    <h3 class="head3">Student Activities</h3>
+                    <table class="table mytable">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Category Name</th>
+                            <th scope="col">Activity Name</th>
+                            <th scope="col">Activity Description</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">End Date</th>
+                        </tr>
+                        </thead>
+                        <?php
+                            if(isset($_POST["btn-search-std"]))
+                            {
+                                $std_id = $_POST["std_id"];
+                                $qry = " SELECT cat_name, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$std_id."' ";
+                                $res = $con->query($qry);
+                                $result = "";
+                                if($res->num_rows > 0)
+                                {
+                                    while($row = $res->fetch_assoc())
+                                    {
+
+                        ?>
+                        <tbody>
+                        <tr>
+                            <td><?php echo " ".$row["cat_name"]." " ?></td>
+                            <td><?php echo " ".$row["act_name"]." " ?></td>
+                            <td><?php echo " ".$row["act_desc"]." " ?></td>
+                            <td><?php echo " ".$row["start_date"]." " ?></td>
+                            <td><?php echo " ".$row["end_date"]." " ?></td>
+                        </tr>
+                        <?php
+                                    }
+                                }
+                            }
+                            else{
+                                echo "No Results Found!!";
+                            }
+                        ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        <!-- Admin Dashboard Code End-->
+        <!-- Admin Show Student Code End-->
     <?php include "admin_foot.php" ?>
