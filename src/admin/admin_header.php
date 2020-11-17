@@ -41,8 +41,7 @@
                 </a> </div>
             <div class="list-group list-group-flush font-weight-bold">
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
-                <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Add New Category</a>
-                <a href="modify_category.php" class="list-group-item list-group-item-action bg-light">Modify Category</a>
+                <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Categories</a>
                 <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>
                 <a href="transcript_requests.php" class="list-group-item list-group-item-action bg-light">Transcript Requests</a>
             </div>
