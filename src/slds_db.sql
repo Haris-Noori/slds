@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 01:59 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Nov 17, 2020 at 05:11 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,14 +29,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `activity` (
-  `act_id` int(11) NOT NULL,
-  `act_name` varchar(50) NOT NULL,
-  `act_desc` varchar(200) NOT NULL,
+  `act_id` int(5) NOT NULL,
   `cat_id` int(11) NOT NULL,
   `std_id` int(11) NOT NULL,
+  `act_name` varchar(100) NOT NULL,
+  `act_desc` varchar(200) NOT NULL,
   `start_date` varchar(20) NOT NULL,
   `end_date` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `activity`
+--
+
+INSERT INTO `activity` (`act_id`, `cat_id`, `std_id`, `act_name`, `act_desc`, `start_date`, `end_date`) VALUES
+(1, 1, 1, 'Team Head', 'Web & IT Team Head - NUCES ACM', '2019-10-01', '2021-05-10'),
+(2, 1, 2, 'Crew Member', 'Web & IT Team - Habib ACM', '2020-04-01', '2020-11-17');
 
 -- --------------------------------------------------------
 
@@ -77,6 +86,20 @@ CREATE TABLE `category` (
   `cat_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
+(1, 'Student Leadership'),
+(2, 'Global Engagement'),
+(3, 'Sports & Recreation'),
+(4, 'Community/Voluntary Services'),
+(5, 'Career Development'),
+(6, 'Publication/Creative Activity'),
+(7, 'Awards & Scholarships'),
+(8, 'Others');
+
 -- --------------------------------------------------------
 
 --
@@ -98,7 +121,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`std_id`, `std_password`, `std_name`, `std_email`, `std_ind_year`, `std_phone`, `std_program`) VALUES
-(1, 'student', 'Haris', 'haris@gmail.com', 2017, '12345678', 'CS');
+(1, 'student', 'Haris', 'haris@gmail.com', 2017, '12345678', 'CS'),
+(2, '123', 'salihah', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -120,6 +144,7 @@ CREATE TABLE `transcript` (
 --
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`act_id`),
+  ADD UNIQUE KEY `act_name` (`act_name`),
   ADD KEY `act_cat_id` (`cat_id`),
   ADD KEY `act_std_id` (`std_id`);
 
@@ -161,7 +186,7 @@ ALTER TABLE `transcript`
 -- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `act_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `act_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -173,13 +198,29 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `attachments`
+--
+ALTER TABLE `attachments`
+  ADD CONSTRAINT `act_id` FOREIGN KEY (`act_id`) REFERENCES `activity` (`act_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `transcript`
+--
+ALTER TABLE `transcript`
+  ADD CONSTRAINT `std_id` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
