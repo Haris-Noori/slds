@@ -21,7 +21,7 @@
                 <form class="myform" action="" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <input name="input_pass" type="password" class="form-control border-dark" id="inputEmail4" placeholder="***">
+                            <input name="admin_password" type="password" class="form-control border-dark" id="inputEmail4" placeholder="*****">
                         </div>
                         <div class="form-group col-md-4">
                             <button type="submit" name="btn_id" class="btn btn-success">Update</button>
@@ -32,9 +32,9 @@
                 <?php
                 if(isset($_POST["btn_id"]))
                 {
-                    $in_pass = $_POST["input_pass"];
+                    $admin_password = $_POST["admin_password"];
 
-                    $qry = " UPDATE admins SET admin_pass='".$in_pass."' WHERE admin_name='".$_SESSION["admin"]."' ";
+                    $qry = " UPDATE admin SET admin_password='".$admin_password."' WHERE admin_id='".$_SESSION["admin"]."' ";
 
                     if($con->query($qry))
                     {
