@@ -18,6 +18,7 @@
                 <div class="col-md-12">
                     <label class="">Choose Category</label>
                     <select name="cat_id" class="form-control border-dark col-md-4" id="">
+                        --
                         <option value="NULL"> -- </option>
                         <?php
                             $qry_get_cat = " SELECT * FROM category ";
@@ -85,11 +86,27 @@
         <?php
             if(isset($_POST["btn_add_activity"]))
             {
-                /*foreach($_FILES['doc']['name'] as $key=>$val)
+                $file_path = 'doc/'.$_SESSION["student"];
+                if(file_exists($file_path))
                 {
-                    mkdir($_SESSION["student"]);
-                    move_uploaded_file($_FILES['doc']['tmp_name'][$key], $_SESSION["student"].'/'.$val);
-                }*/
+                    //echo "Exists";
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        /*echo "\nval: ".$val;
+                        echo "\nPath: ".$file_path;
+                        echo "\nComplete Path: ".$file_path.'/'.$val;
+                        echo "<br>";*/
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                    }
+                }
+                else {
+                    //echo "Not exists";
+                    mkdir($file_path);
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                    }
+                }
 
                 $cat_id = $_POST["cat_id"];
                 $act_name = $_POST["act_name"];
