@@ -18,7 +18,6 @@
                 <div class="col-md-12">
                     <label class="">Choose Category</label>
                     <select name="cat_id" class="form-control border-dark col-md-4" id="">
-                        --
                         <option value="NULL"> -- </option>
                         <?php
                             $qry_get_cat = " SELECT * FROM category ";
@@ -209,7 +208,8 @@
             <tbody>
             <tr>
                 <td><?php echo " ".$row["file_name"]." " ?></td>
-                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank">View File</a></td>
+                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
+                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-danger">Delete</a></td>
             </tr>
             <?php
             }
