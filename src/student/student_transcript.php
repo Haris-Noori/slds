@@ -21,17 +21,28 @@
             <div class="form-row">
                 <label for=""></label>
                 <?php
+                    if($res->num_rows == 0)
+                    {
+                        echo "Not Requested Yet  ";
+                        ?>
+                        <a href='student_transcript_try.php?ins_std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-primary">Request Transcript</a>
+                        <?php
+                    }
                     if($row["status"] == 'approved')
                     {
                         ?>
-                            <button class="btn btn-success">Download Transcript</button>
+                            <a class="btn btn-success text-white">Download Transcript</a>
                         <?php
                     }
-                    if($row["status"] == null || $row["status"] == 'disapproved')
+                    if($row["status"] == 'disapproved')
                     {
                         ?>
-                        <button class="btn btn-primary">Request Transcript</button>
+                        <a href='student_transcript_try.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-primary">Request Transcript</a>
                         <?php
+                    }
+                    if($row["status"] == 'requested')
+                    {
+                        echo "Already Requested, wait for approval!";
                     }
                 ?>
             </div>
