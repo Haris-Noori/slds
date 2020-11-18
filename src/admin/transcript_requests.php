@@ -1,10 +1,7 @@
 <?php include "../connect.php";
-    $res_student_name = "";
-    $res_student_pass = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Transcript Requests | Admin</title>
 
@@ -29,28 +26,26 @@
                                 </tr>
                                 </thead>
                                 <?php
-                                $qry = " ";
-                                $res = $con->query($qry);
-                                $result = "";
-                                if($res->num_rows > 0)
-                                {
-                                echo "Total Students: ".$res->num_rows;
-                                while($row = $res->fetch_assoc())
-                                {
+                                    $qry = " SELECT * FROM transcript WHERE status <> 'approved' ";
+                                    $res = $con->query($qry);
+                                    $result = "";
+                                    if($res->num_rows > 0)
+                                    {
+                                        while($row = $res->fetch_assoc())
+                                        {
                                 ?>
-
                                 <tbody>
                                 <tr>
-                                    <th scope="row"> <?php echo " ".$row["student_id"]." " ?> </th>
-                                    <td><?php echo " ".$row["student_name"]." " ?></td>
+                                    <th scope="row"> <?php echo " ".$row["std_id"]." " ?> </th>
+                                    <td><a href="view_std_record.php?std_id=<?php echo $row["std_id"] ?>" class="btn btn-primary">View Student Record</a></td>
                                 </tr>
 
                                 <?php
-                                }
-                                }
-                                else{echo "No Results Found!!";}
-
-                                //bss yahan tak
+                                        }
+                                    }
+                                    else{
+                                        echo "No Results Found!!";
+                                    }
                                 ?>
                                 </tbody>
                             </table>
