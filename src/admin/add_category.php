@@ -12,17 +12,18 @@
         <!-- Admin Dashboard Code Start-->
 
             <div class="container-fluid">
-                <h1 class="mt-4">Add New Category</h1>
+                <h2 class="mt-4"><u>Categories</u></h2>
                 
                 <form class="myform" action="add_category_try.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="inputEmail4">Category Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Category" name="" required>
+                            <label for="inputEmail4">Add New Category</label>
+                            <input type="text" class="form-control border-dark" id="inputEmail4" placeholder="Category Name" name="cat_name" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <button type="submit" name="btn-add-cat" class="btn btn-success btn-lg mt-4">Add</button>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-lg">Add</button>
-                    <br>
                     <br>
                     <div class="form group-row">
                         <?php
@@ -43,35 +44,40 @@
                 </form>
 
                     <div class="container">
-                        <h3 class="head3">All Categories</h3>
+                        <h4 class="head3">All Categories</h4>
 
                         <table class="table mytable">
                             <thead class="thead-dark">
                             <tr>
-                                <th scope="col" style="width: 400px">Category Name</th>
+                                <th scope="col">Category ID</th>
+                                <th scope="col">Category Name</th>
+                                <th scope="col">Action</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <?php
-                            /*$qry = " SELECT  ";
+                            $qry = " SELECT * FROM category ";
                             $res = $con->query($qry);
                             $result = "";
                             if($res->num_rows > 0)
                             {
-                            echo "Total Tutors: ".$res->num_rows;
+                            echo "Total Categories: ".$res->num_rows;
                             while($row = $res->fetch_assoc())
                             {
-                            */?><!--
+                            ?>
 
                             <tbody>
                             <tr>
-                                <th scope="row"> <?php /*echo " ".$row["tutor_id"]." " */?> </th>
-                                <td><?php /*echo " ".$row["tutor_name"]." " */?></td>
+                                <td><?php echo " ".$row["cat_id"]." " ?></td>
+                                <td><?php echo " ".$row["cat_name"]." " ?></td>
+                                <td><a href='modify_category.php?edit_cat_id=<?php echo $row['cat_id'] ?>'><button class="btn btn-primary">Edit Category</button></a></td>
+                                <td><a href='modify_category.php?del_cat_id=<?php echo $row['cat_id'] ?>'><button class="btn btn-danger">Delete Category</button></a></td>
                             </tr>
 
-                            --><?php
-/*                            }
+                            <?php
                             }
-                            else{echo "No Results Found!!";}*/
+                            }
+                            else{echo "No Results Found!!";}
 
                             //bss yahan tak
                             ?>

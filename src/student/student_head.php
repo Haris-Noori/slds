@@ -17,7 +17,15 @@
     <link rel="stylesheet" href="../../css/simple-sidebar.css" rel="stylesheet">
 
     <!--FONT LINK-->
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+Bhaina+2&family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
 </head>
 <body>  
     <!-- Image and text -->
@@ -27,12 +35,12 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">
                 <a class="navbar-brand" href="student_dashboard.php">
-                    Student Life
+                    <img src="../../img/habib-logo.jpg" width="180" alt="">
                 </a> </div>
-            <div class="list-group list-group-flush">
+            <div class="list-group list-group-flush font-weight-bold">
                 <a href="my_profile.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
-                <a href="add_activity.php" class="list-group-item list-group-item-action bg-light">Add Activity</a>
-                <a href="modify_booking.php" class="list-group-item list-group-item-action bg-light">Modify Booking</a>
+                <a href="meta_curricular_form.php" class="list-group-item list-group-item-action bg-light">Meta-Curricular Form</a>
+                <a href="student_transcript.php" class="list-group-item list-group-item-action bg-light">My Transcript</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -41,7 +49,7 @@
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg navbar-light border-bottom mynavbar">
-                <button class="btn btn-success mybtn" id="menu-toggle">Student Panel</button>
+                <button class="btn btn-success mybtn" id="menu-toggle">Student Portal</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -56,14 +64,15 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>
                                 <?php echo $_SESSION["student_name"]; ?>
+                                </strong>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="my_profile.php">My Profile</a>
                                 <a class="dropdown-item" href="change_password.php">Change Password</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="student_logout.php">Logout</a>
+                                <a class="dropdown-item" href="student_logout.php"><strong>Logout</strong></a>
                             </div>
                         </li>
                     </ul>

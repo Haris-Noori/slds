@@ -19,8 +19,14 @@
     <link href="../../css/simple-sidebar.css" rel="stylesheet">
 
     <!--FONT LINK-->
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baloo+Bhaina+2&family=Press+Start+2P&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,12 +37,11 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">
                 <a class="navbar-brand" href="admin_dashboard.php">
-                    SLDS
+                    <img src="../../img/habib-logo.jpg" width="180" alt="">
                 </a> </div>
-            <div class="list-group list-group-flush">
+            <div class="list-group list-group-flush font-weight-bold">
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
-                <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Add New Category</a>
-                <a href="modify_category.php" class="list-group-item list-group-item-action bg-light">Modify Category</a>
+                <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Categories</a>
                 <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>
                 <a href="transcript_requests.php" class="list-group-item list-group-item-action bg-light">Transcript Requests</a>
             </div>
@@ -47,7 +52,7 @@
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg mynavbar navbar-light border-bottom">
-                <button class="btn btn-success mybtn" id="menu-toggle">Admin Panel</button>
+                <button class="btn btn-success mybtn" id="menu-toggle">Admin Portal</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -61,7 +66,7 @@
                             <a class="nav-link text-white" href="#">Welcome,<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle text-white font-weight-bolder" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <?php echo $_SESSION["admin"]; ?>
                             </a>
@@ -69,7 +74,7 @@
                                 <a class="dropdown-item" href="#">My Profile</a>
                                 <a class="dropdown-item" href="admin_dashboard.php">Change Password</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="admin_logout.php">Logout</a>
+                                <a class="dropdown-item" href="admin_logout.php"><strong>Logout</strong></a>
                             </div>
                         </li>
                     </ul>
