@@ -154,11 +154,13 @@
                     <th scope="col">Activity Description</th>
                     <th scope="col">Start Date</th>
                     <th scope="col">End Date</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <?php
 
-            $qry = " SELECT cat_name, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$_SESSION["student"]."' ";
+            $qry = " SELECT cat_name, act_id, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$_SESSION["student"]."' ";
             $res = $con->query($qry);
             $result = "";
 
@@ -174,6 +176,8 @@
                     <td><?php echo " ".$row["act_desc"]." " ?></td>
                     <td><?php echo " ".$row["start_date"]." " ?></td>
                     <td><?php echo " ".$row["end_date"]." " ?></td>
+                    <td><a href='edit_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-primary">Edit</a></td>
+                    <td><a href='del_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-danger">Delete</a></td>
                 </tr>
             <?php
             }
