@@ -17,7 +17,7 @@
             <div class="form-row">
                 <div class="col-md-12">
                     <label class="">Choose Category</label>
-                    <select name="cat_id" class="form-control border-dark col-md-4" id="">
+                    <select name="cat_id" class="form-control border-dark col-md-4" id="" required>
                         <option value="NULL"> -- </option>
                         <?php
                             $qry_get_cat = " SELECT * FROM category ";
@@ -36,21 +36,21 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Activity Name</label>
-                    <input name="act_name" type="text" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="act_name" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Activity Description</label>
-                    <input name="act_desc" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="act_desc" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Start Date</label>
-                    <input name="start_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="start_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">End Date</label>
-                    <input name="end_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="end_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
             </div>
             <div class="form-row">
@@ -213,7 +213,7 @@
             <tr>
                 <td><?php echo " ".$row["file_name"]." " ?></td>
                 <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
-                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-danger">Delete</a></td>
+                <td><a href='del_file.php?file_name=<?php echo $row["file_name"] ?>' class="btn btn-danger">Delete</a></td>
             </tr>
             <?php
             }
