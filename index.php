@@ -16,19 +16,23 @@
     <!-- FONT LINKS  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
     <style>
-        body{
+        body
+        {
             font-family: 'Poppins', sans-serif;
+            background: white;
         }
     </style>
+
 </head>
 
 <body>
 
     <nav class="navbar mynav align-content-center">
         <div class="mydiv">
-            <a id="techvalley" href="index.php">
-                Student Life Department System
+            <a class="text-dark" id="techvalley" href="index.php">
+                <h1><strong>Student Life Department System</strong></h1>
             </a>
         </div>
     </nav>
@@ -36,24 +40,23 @@
     <div class="container mcontainer">
         <div class="row main-card">
 
-            <div class="col-sm-6 col-md-4 cards" id="card1">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/card.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Admin Login</h5>
+            <div class="col-sm-6 col-md-4 cards" id="card1" >
+                <div class="card" style="width: 18rem ; border: 4px solid black">
+                    <img  src="img/admin1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body font-weight-bold" style="background: lightgrey">
+                        <h5 class="card-title font-weight-bold">Admin Login</h5>
                         <p class="card-text">This is for admins only</p>
                         <a href="src/admin/admin_login.php" class="btn btn-dark">Login</a>
                     </div>
                 </div>
             </div>
 
-
             <div class="col-sm-6 col-md-4 cards" id="card2">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/card.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Student Login</h5>
-                        <p class="card-text">Thus is for Student Login</p>
+                <div class="card" style="width: 18rem; border: 4px solid black" >
+                    <img height="260" src="img/59983.jpg" class="card-img-top" alt="...">
+                    <div class="card-body font-weight-bold" style="background: lightgrey"  >
+                        <h5 class="card-title font-weight-bold" >Student Login</h5>
+                        <p class="card-text font-weight-bold">Thus is for Student Login</p>
                         <a href="src/student/student_login.php" class="btn btn-dark">Login</a>
                     </div>
                 </div>
