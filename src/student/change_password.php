@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>My Profile | Operator</title>
+    <title>My Profile | Student</title>
     <link rel="stylesheet" href="../../css/my_profile.css">
 </head>
 
@@ -18,22 +18,19 @@
         <form class="myform" action="" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
-
-                    <input name="input_pass" type="password" class="form-control" id="inputEmail4" placeholder="***">
-
+                    <input name="std_pass" type="password" class="form-control" id="inputEmail4" placeholder="***">
                 </div>
                 <div class="form-group col-md-4">
-                    <button type="submit" name="btn_id" class="btn btn-success">Update</button>
+                    <button type="submit" name="btn_update_pass" class="btn btn-success">Update</button>
                 </div>
             </div>
         </form>
 
         <?php
-        if(isset($_POST["btn_id"]))
+        if(isset($_POST["btn_update_pass"]))
         {
-            $in_pass = $_POST["input_pass"];
-
-            $qry = " UPDATE students SET student_pass='".$in_pass."' WHERE student_name='".$_SESSION["student"]."' ";
+            $std_password = $_POST["std_pass"];
+            $qry = " UPDATE student SET std_password='".$std_password."' WHERE std_id='".$_SESSION["student"]."' ";
 
             if($con->query($qry))
             {

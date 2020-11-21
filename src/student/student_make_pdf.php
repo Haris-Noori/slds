@@ -1,13 +1,15 @@
 <?php
+    session_start();
+    $std_id = $_GET["std_id"];
+
     ob_clean();
     require_once __DIR__ .'/vendor/autoload.php' ;
     include "../connect.php";
-    session_start();
 
     $pdf = new \Mpdf\Mpdf();
     $pdf->AddPage();
     //echo "ID: ".$_SESSION["student"];
-    $qry_get_student = " SELECT * FROM student WHERE std_id=1 ";
+    $qry_get_student = " SELECT * FROM student WHERE std_id='".$std_id."' ";
     $res_std = $con->query($qry_get_student);
     $row_std = $res_std->fetch_assoc();
 
@@ -62,10 +64,9 @@
            
     ';
 
-    //$html3 .='';
 
 
-    $pdf->Image('habib.jpg',25,10,150,50);
+    $pdf->Image('../../img/habbib.jpg',25,10,150,50);
     //$pdf->WriteHTML($html1);
 
     $qry1 = "SELECT * FROM category";

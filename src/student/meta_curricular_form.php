@@ -18,7 +18,6 @@
                 <div class="col-md-12">
                     <label class="">Choose Category</label>
                     <select name="cat_id" class="form-control border-dark col-md-4" id="" required>
-                        <option value="NULL"> -- </option>
                         <?php
                             $qry_get_cat = " SELECT * FROM category ";
                             $res = $con->query($qry_get_cat);

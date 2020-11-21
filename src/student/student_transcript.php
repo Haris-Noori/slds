@@ -31,7 +31,7 @@
                     if($row["status"] == 'approved')
                     {
                         ?>
-                            <a class="btn btn-success text-white">Download Transcript</a>
+                            <a href='student_make_pdf.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-success text-white">Download Transcript</a>
                         <?php
                     }
                     if($row["status"] == 'disapproved')
