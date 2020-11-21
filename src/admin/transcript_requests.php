@@ -26,7 +26,7 @@
                                 </tr>
                                 </thead>
                                 <?php
-                                    $qry = " SELECT * FROM transcript WHERE status <> 'approved' ";
+                                    $qry = " SELECT * FROM transcript WHERE status <> 'approved' AND status <> 'disapproved' ";
                                     $res = $con->query($qry);
                                     $result = "";
                                     if($res->num_rows > 0)
