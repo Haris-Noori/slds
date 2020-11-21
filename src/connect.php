@@ -16,4 +16,3 @@
     {
         // echo "<script> alert('Successfully connected to database')</script>";
     }
-?>
