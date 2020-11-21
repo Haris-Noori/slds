@@ -11,8 +11,6 @@
     $qry_get_student = " SELECT * FROM student WHERE std_id=1 ";
     $res_std = $con->query($qry_get_student);
     $row_std = $res_std->fetch_assoc();
-    //echo "ID: ".$row_std["std_id"];
-
 
     $html1 = '
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
