@@ -6,7 +6,6 @@
 
     $pdf = new \Mpdf\Mpdf();
     $pdf->AddPage();
-
     //echo "ID: ".$_SESSION["student"];
     $qry_get_student = " SELECT * FROM student WHERE std_id=1 ";
     $res_std = $con->query($qry_get_student);
