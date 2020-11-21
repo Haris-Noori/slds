@@ -40,28 +40,26 @@
         
         <div class="container mt-4" style="background: lightgray">
             <div class="row">
-                <div class="col-sm-4">Student Name: <strong>';
+                <div class="col-sm-4"><span class="font-weight-bold">Student Name: </span>';
                 $html1 .= $row_std["std_name"];
-
-                $html1 .=  '</strong></div>
-                
-                <div class="col-sm-4">Student ID: ';
+                $html1 .=  '</div>
+                <div class="col-sm-4" style="font-weight: bolder">Student ID: ';
                 $html1 .= $row_std["std_id"];
                 $html1 .= '</div>
-                <div class="col">Academic Program: <strong>';
+                <div class="col">Academic Program: ';
                 $html1 .= $row_std["std_program"];
-                $html1 .= '</strong></div>
+                $html1 .= '</div>
             </div>
             <div class="row">
-                <div class="col">Email: <strong>';
+                <div class="col">Email: ';
                 $html1 .= $row_std["std_email"];
-                $html1 .= '</strong></div>
-                <div class="col">Phone Number: <strong>';
+                $html1 .= '</div>
+                <div class="col">Phone Number: ';
                 $html1 .= $row_std["std_phone"];
-                $html1 .= '</strong></div>
-                <div class="col">Induction Year: <strong>';
+                $html1 .= '</div>
+                <div class="col">Induction Year: ';
                 $html1 .= $row_std["std_ind_year"];
-                $html1 .= '</strong></div>
+                $html1 .= '</div>
             </div>    
         </div>
            
@@ -103,7 +101,7 @@
 
 
             $flag = 0;
-            $qry2 = "SELECT act_id,act_name,act_desc,start_date,end_date FROM activity WHERE cat_id = '" . $row["cat_id"] . "' ";
+            $qry2 = "SELECT act_id,act_name,act_desc,start_date,end_date FROM activity WHERE cat_id='".$row["cat_id"]."' AND std_id='".$row_std["std_id"]."' ";
 
             if ($con->query($qry2)) {
 
