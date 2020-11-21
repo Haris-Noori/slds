@@ -57,7 +57,7 @@
                 </div>
                 <br>
                 <div class="form group-row">
-                    <button type="submit" class="form-control col-sm-4 text-white" style="background: purple"><strong>Login</strong></button>
+                    <button type="submit" class="form-control col-sm-4 btn-success text-white"><strong>Login</strong></button>
                 </div>
                 <br>
                 <div class="form group-row">

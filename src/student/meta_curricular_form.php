@@ -17,7 +17,7 @@
             <div class="form-row">
                 <div class="col-md-12">
                     <label class="">Choose Category</label>
-                    <select name="cat_id" class="form-control border-dark col-md-4" id="">
+                    <select name="cat_id" class="form-control border-dark col-md-4" id="" required>
                         <option value="NULL"> -- </option>
                         <?php
                             $qry_get_cat = " SELECT * FROM category ";
@@ -36,21 +36,21 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Activity Name</label>
-                    <input name="act_name" type="text" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="act_name" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">Activity Description</label>
-                    <input name="act_desc" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="act_desc" type="text" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="">Start Date</label>
-                    <input name="start_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="">
+                    <input name="start_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="">End Date</label>
-                    <input name="end_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
+                    <input name="end_date" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" required>
                 </div>
             </div>
             <div class="form-row">
@@ -85,11 +85,34 @@
         <?php
             if(isset($_POST["btn_add_activity"]))
             {
-                /*foreach($_FILES['doc']['name'] as $key=>$val)
+                $file_path = 'doc/'.$_SESSION["student"];
+                if(file_exists($file_path))
                 {
-                    mkdir($_SESSION["student"]);
-                    move_uploaded_file($_FILES['doc']['tmp_name'][$key], $_SESSION["student"].'/'.$val);
-                }*/
+                    //echo "Exists";
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        /*echo "\nval: ".$val;
+                        echo "\nPath: ".$file_path;
+                        echo "\nComplete Path: ".$file_path.'/'.$val;
+                        echo "<br>";*/
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                        $qry_add_filename = " INSERT INTO files(std_id, file_name) VALUES('".$_SESSION["student"]."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
+                else {
+                    //echo "Not exists";
+                    mkdir($file_path);
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        // Moving into folder
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+
+                        // saving file name into database
+                        $qry_add_filename = " INSERT INTO files(std_id, file_name) VALUES('".$_SESSION["student"]."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
 
                 $cat_id = $_POST["cat_id"];
                 $act_name = $_POST["act_name"];
@@ -131,11 +154,13 @@
                     <th scope="col">Activity Description</th>
                     <th scope="col">Start Date</th>
                     <th scope="col">End Date</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <?php
 
-            $qry = " SELECT cat_name, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$_SESSION["student"]."' ";
+            $qry = " SELECT cat_name, act_id, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$_SESSION["student"]."' ";
             $res = $con->query($qry);
             $result = "";
 
@@ -146,12 +171,50 @@
             ?>
             <tbody>
                 <tr>
-                    <th><?php echo " ".$row["cat_name"]." " ?></th>
+                    <td><?php echo " ".$row["cat_name"]." " ?></td>
                     <td><?php echo " ".$row["act_name"]." " ?></td>
                     <td><?php echo " ".$row["act_desc"]." " ?></td>
                     <td><?php echo " ".$row["start_date"]." " ?></td>
                     <td><?php echo " ".$row["end_date"]." " ?></td>
+                    <td><a href='edit_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-primary">Edit</a></td>
+                    <td><a href='del_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-danger">Delete</a></td>
                 </tr>
+            <?php
+            }
+            }
+            else{echo "No Results Found!!";}
+
+            ?>
+            </tbody>
+        </table>
+
+        <hr style="border: 2px solid black">
+        <h4>My Images/Certificates/Documents</h4>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">File Name</th>
+                <th scope="col">Action</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <?php
+
+            $qry = " SELECT * FROM files WHERE std_id = '".$_SESSION["student"]."' ";
+            $res = $con->query($qry);
+            $result = "";
+
+            if($res->num_rows > 0)
+            {
+            while($row = $res->fetch_assoc())
+            {
+            ?>
+            <tbody>
+            <tr>
+                <td><?php echo " ".$row["file_name"]." " ?></td>
+                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
+                <td><a href='del_file.php?file_name=<?php echo $row["file_name"] ?>' class="btn btn-danger">Delete</a></td>
+            </tr>
             <?php
             }
             }
