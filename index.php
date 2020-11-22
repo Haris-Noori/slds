@@ -21,6 +21,7 @@
         body
         {
             font-family: 'Poppins', sans-serif;
+            /*background: white;*/
             background: white;
         }
     </style>
@@ -29,15 +30,16 @@
 
 <body>
 
-    <nav class="navbar mynav align-content-center">
-        <div class="mydiv">
+    <nav class="mt-4 navbar mynav align-content-center">
+        <div class="mydiv" style="background: white">
+            <img src="img/habbib.jpg">
             <a class="text-dark" id="techvalley" href="index.php">
-                <h1><strong>Student Life Department System</strong></h1>
+<!--                <h1><strong>Student Life Department System</strong></h1>-->
             </a>
         </div>
     </nav>
 
-    <div class="container mcontainer">
+    <div class="mt-5 container mcontainer">
         <div class="row main-card">
 
             <div class="col-sm-6 col-md-4 cards" id="card1" >

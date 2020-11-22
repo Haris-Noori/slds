@@ -25,15 +25,15 @@
 <body>
 
 
-    <nav class="navbar mynav">
-        <div class="mydiv">
+    <nav class="navbar mynav" style="background: white">
+        <div class="mydiv" style="background: white">
             <a id="techvalley" href="../../index.php">
-                Student Life Department System
+                <img src="../../img/habbib.jpg">
             </a>
             <ul>
-                <li><a class="text-white" href="../../index.php">Home</a></li>
-                <li><a class="text-white" href="../admin/admin_login.php">Admin</a></li>
-                <li>About</li>
+                <li><a class="text-black-50" href="../../index.php">Home</a></li>
+                <li><a class="text-black-50" href="../admin/admin_login.php">Admin</a></li>
+                <li style="color: gray">About</li>
             </ul>
         </div>
 
