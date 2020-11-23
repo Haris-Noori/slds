@@ -77,13 +77,21 @@
         {
             //$pdf->SetFont('arial', 'b', '14');
 
-            //Category name loop
-            $html1 .= '<h1 class="col-md-6 text-white mt-5" style="background: purple; font-size: 27px">';
-            $cat_name = $row["cat_name"];
-            $html1 .= $cat_name;
-            $html1 .= '</h1>';
+            $qry2 = "SELECT act_id,act_name,act_desc,start_date,end_date FROM activity WHERE cat_id='".$row["cat_id"]."' AND std_id='".$row_std["std_id"]."' ";
 
-            $html1 .= ' 
+            if ($con->query($qry2)) {
+                $res2 = $con->query($qry2);
+
+                // If Activity Table is not Empty, then create table
+                if($res2->num_rows > 0) {
+                    $html1 .= '<h1 class="col-md-6 text-white mt-5" style="background: purple; font-size: 27px">';
+                    // Write Category Name
+                    $cat_name = $row["cat_name"];
+                    $html1 .= $cat_name;
+                    $html1 .= '</h1>';
+
+                    // Create Table and Make Headings
+                    $html1 .= ' 
                         <table class="table">
                              <thead class="text-white">
                                 <tr>
@@ -96,45 +104,37 @@
                              <tbody>                                     
                         ';
 
+                    // Get all the activities, one by one, in rows
+                    while ($row2 = $res2->fetch_assoc()) {
 
-
-            $flag = 0;
-            $qry2 = "SELECT act_id,act_name,act_desc,start_date,end_date FROM activity WHERE cat_id='".$row["cat_id"]."' AND std_id='".$row_std["std_id"]."' ";
-
-            if ($con->query($qry2)) {
-
-                $res2 = $con->query($qry2);
-                while ($row2 = $res2->fetch_assoc()) {
-
-                    if ($flag == 0 ) {
-
-
-                        $flag = 1;
-                    }
-
-                    $html1 .= ' <tr>
+                        $html1 .= ' <tr>
                                     ';
-                    $cat_name = $row["cat_name"];
-                    $html1 .= $cat_name;
-                    $act_name = $row2['act_name'];
-                    $act_desc = $row2['act_desc'];
-                    $start_date = $row2['start_date'];
-                    $end_date = $row2['end_date'];
+                        $cat_name = $row["cat_name"];
+                        $html1 .= $cat_name;
+                        $act_name = $row2['act_name'];
+                        $act_desc = $row2['act_desc'];
+                        $start_date = $row2['start_date'];
+                        $end_date = $row2['end_date'];
 
-                    $html1 .= '<td>';
-                    $html1 .= $act_name;
-                    $html1 .= '</td><td>';
-                    $html1 .= $act_desc;
-                    $html1 .= '</td><td>';
-                    $html1 .= $start_date;
-                    $html1 .= '</td><td>';
-                    $html1 .= $end_date;
-                    $html1 .= '</td>';
-                    $html1 .= '</tr>';
+                        $html1 .= '<td>';
+                        $html1 .= $act_name;
+                        $html1 .= '</td><td>';
+                        $html1 .= $act_desc;
+                        $html1 .= '</td><td>';
+                        $html1 .= $start_date;
+                        $html1 .= '</td><td>';
+                        $html1 .= $end_date;
+                        $html1 .= '</td>';
+                        $html1 .= '</tr>';
 
-                }   // edn of activities loop
 
-                $html1 .= '</tbody>';
+                    }   // edn of activities loop
+
+                    $html1 .= '</tbody>';
+                    $html1 .= '</table>';
+                }
+
+
             }
 
             else
@@ -142,12 +142,22 @@
                 echo "there is a problem \n";
             }
 
-            $html1 .= '</table>';
+        }   // End of Categories loop
+        date_default_timezone_set("Asia/Karachi");
+        $date = date("jS \ F Y");
 
-        }   // end of first categories loop
+        $html1 .= '
+                <hr class="mb-0" style="border: 10px solid black">
+                <p class="text-center">In Witness there of these signatures confirm the authenticity of this transcript. ';
+        $html1 .= $date;
+        $html1 .= '</p>';
 
-                  $html1 .='</body>
-                        </html>';
+        $html1 .= '<p>
+
+</p>';
+
+        $html1 .='</body>
+                </html>';
     }
     $pdf->WriteHTML($html1);
 

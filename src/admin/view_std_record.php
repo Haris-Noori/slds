@@ -21,13 +21,6 @@
     <div class="container-fluid">
         <h2 class="mt-4"><u>View Student Record</u></h2>
 
-        <div class="row">
-            <div class="container">
-                <a href='modify_std_status.php?a_std_id=<?php echo $std_id ?>'><button class="btn btn-success">Approve</button></a>
-                <a href='modify_std_status.php?d_std_id=<?php echo $std_id ?>'><button class="btn btn-danger">Disapprove</button></a>
-            </div>
-        </div>
-
         <br>
         <h3>Student Record</h3>
         <div class="container">
@@ -122,6 +115,14 @@
             ?>
             </tbody>
         </table>
+
+        <!-- Approve/Disapprove Buttons -->
+        <div class="row mb-3">
+            <div class="container">
+                <a href='modify_std_status.php?a_std_id=<?php echo $std_id ?>'><button class="btn btn-success">Approve</button></a>
+                <a href='modify_std_status.php?d_std_id=<?php echo $std_id ?>'><button class="btn btn-danger">Disapprove</button></a>
+            </div>
+        </div>
 
     </div>
     <!-- Admin Dashboard Code End-->

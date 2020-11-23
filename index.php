@@ -58,7 +58,7 @@
                     <img height="260" src="img/59983.jpg" class="card-img-top" alt="...">
                     <div class="card-body font-weight-bold" style="background: lightgrey"  >
                         <h5 class="card-title font-weight-bold" >Student Login</h5>
-                        <p class="card-text font-weight-bold">Thus is for Student Login</p>
+                        <p class="card-text font-weight-bold">This is for students only</p>
                         <a href="src/student/student_login.php" class="btn btn-dark">Login</a>
                     </div>
                 </div>

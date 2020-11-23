@@ -61,14 +61,14 @@
                             $result = "";
                             if($res->num_rows > 0)
                             {
-                            echo "Total Categories: ".$res->num_rows;
+                            $no = 0;
                             while($row = $res->fetch_assoc())
-                            {
+                            { $no++;
                             ?>
 
                             <tbody>
                             <tr>
-                                <td><?php echo " ".$row["cat_id"]." " ?></td>
+                                <td><?php echo " ".$no.""?></td>
                                 <td><?php echo " ".$row["cat_name"]." " ?></td>
                                 <td><a href='modify_category.php?edit_cat_id=<?php echo $row['cat_id'] ?>'><button class="btn btn-primary">Edit Category</button></a></td>
                                 <td><a href='modify_category.php?del_cat_id=<?php echo $row['cat_id'] ?>'><button class="btn btn-danger">Delete Category</button></a></td>

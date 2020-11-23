@@ -9,16 +9,15 @@
     <?php include "student_head.php" ?>
             <!-- Student Dashboard Code Start -->
             <div class="container-fluid">
-                <h1 class="mt-4">Welcome, <?php /*echo $_SESSION["student"];*/ ?></h1>
+                <h1 class="mt-4">Welcome,</h1>
 
                 <div class="jumbotron">
                     <div class="container-fluid">
                         <h1 class="mt-4">Student guide:</h1>
                         <ul>
-                            <li>On your left side, there is a student panel</li>
-                            <li>You can hide and see the panel by clicking the <code>Student Panel</code> button on Nav Bar</li>
-                            <li>To change your password, click on your name at top-right of the Nav Bar. Then click on <code>change password</code></li>
-                            <li>To logout, at top-right of Nav Bar, click on your name </li>
+                            <li>On your left there is a Student Panel.</li>
+                            <li>You can hide or view the panel by clicking on the Student Panel button on the navigation bar.</li>
+                            <li>Click on your name at the top-right of the navigation bar to change your password or logout.</li>
                         </ul>
                     </div>
                 </div>

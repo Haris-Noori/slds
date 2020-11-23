@@ -32,8 +32,6 @@
             </a>
             <ul>
                 <li><a class="text-black-50" href="../../index.php">Home</a></li>
-                <li><a class="text-black-50" href="../admin/admin_login.php">Admin</a></li>
-                <li style="color: gray">About</li>
             </ul>
         </div>
 

@@ -18,26 +18,26 @@
         <h2 class="mt-4"><u>My Transcript</u></h2>
 
         <form action="">
-            <div class="form-row">
+            <div class="form-group">
                 <label for=""></label>
                 <?php
                     if($res->num_rows == 0)
                     {
-                        echo "Not Requested Yet  ";
+                        echo "Not Requested Yet  \n";
                         ?>
-                        <a href='student_transcript_try.php?ins_std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-primary">Request Transcript</a>
+                        <div><a href='student_transcript_try.php?ins_std_id=<?php echo $_SESSION["student"] ?>' class="form-row btn btn-primary">Request Transcript</a></div>
                         <?php
                     }
                     if($row["status"] == 'approved')
                     {
                         ?>
-                            <a href='student_make_pdf.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-success text-white">Download Transcript</a>
+                        <div><a href='student_make_pdf.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-success text-white">Download Transcript</a></div>
                         <?php
                     }
                     if($row["status"] == 'disapproved')
                     {
                         ?>
-                        <a href='student_transcript_try.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-primary">Request Transcript</a>
+                        <div><a href='student_transcript_try.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-primary">Request Transcript</a></div>
                         <?php
                     }
                     if($row["status"] == 'requested')

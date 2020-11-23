@@ -40,7 +40,6 @@
                     <img src="../../img/habib-logo.jpg" width="180" alt="">
                 </a> </div>
             <div class="list-group list-group-flush font-weight-bold">
-                <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
                 <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Categories</a>
                 <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>
                 <a href="transcript_requests.php" class="list-group-item list-group-item-action bg-light">Transcript Requests</a>
@@ -52,7 +51,7 @@
         <div id="page-content-wrapper">
 
             <nav class="navbar navbar-expand-lg mynavbar navbar-light border-bottom">
-                <button class="btn btn-success mybtn" id="menu-toggle">Admin Portal</button>
+                <button class="btn btn-success mybtn" id="menu-toggle">Admin Panel</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -63,7 +62,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link text-white" href="#">Welcome,<span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-white" href="#"><span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white font-weight-bolder" href="#" id="navbarDropdown" role="button"
@@ -71,8 +70,7 @@
                                 <?php echo $_SESSION["admin"]; ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="admin_dashboard.php">Change Password</a>
+                                <a class="dropdown-item" href="admin_change_pass.php">Change Password</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="admin_logout.php"><strong>Logout</strong></a>
                             </div>
