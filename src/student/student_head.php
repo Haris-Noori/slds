@@ -33,10 +33,11 @@
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">
+            <div class="sidebar-heading" style="padding: 0; margin: 0">
                 <a class="navbar-brand" href="student_dashboard.php">
-                    <img src="../../img/habib-logo.jpg" width="180" alt="">
-                </a> </div>
+                    <img src="../../img/new.png" width="200" alt="" >
+                </a>
+            </div>
             <div class="list-group list-group-flush font-weight-bold">
                 <a href="my_profile.php" class="list-group-item list-group-item-action bg-light">My Profile</a>
                 <a href="meta_curricular_form.php" class="list-group-item list-group-item-action bg-light">Meta-Curricular Form</a>

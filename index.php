@@ -31,11 +31,10 @@
 <body>
 
     <nav class="mt-4 navbar mynav align-content-center">
-        <div class="mydiv" style="background: white">
-            <img src="img/habbib.jpg">
-            <a class="text-dark" id="techvalley" href="index.php">
-<!--                <h1><strong>Student Life Department System</strong></h1>-->
-            </a>
+        <div class="mydiv">
+            <center>
+            <img width="350px" style="align-content: center" src="img/new.png">
+            </center>
         </div>
     </nav>
 
