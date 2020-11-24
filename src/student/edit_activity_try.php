@@ -21,35 +21,6 @@
             header("Location:meta_curricular_form.php");
         }
 
-        // Query Get Last Act ID
-        $files_act_id = $act_id;
-        //echo "Act_ID: ".$files_act_id."\n";
-
-        $file_path = 'doc/'.$_SESSION["student"];
-        if(file_exists($file_path))
-        {
-            //echo "Exists";
-            foreach($_FILES['doc']['name'] as $key=>$val)
-            {
-                move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
-                $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
-                $con->query($qry_add_filename);
-            }
-        }
-        else {
-            //echo "Not exists";
-            mkdir($file_path);
-            foreach($_FILES['doc']['name'] as $key=>$val)
-            {
-                // Moving into folder
-                move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
-
-                // saving file name into database
-                $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
-                $con->query($qry_add_filename);
-            }
-        }
-
     }
 
 

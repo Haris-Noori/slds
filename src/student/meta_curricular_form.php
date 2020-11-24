@@ -125,6 +125,7 @@
                     //echo "Exists";
                     foreach($_FILES['doc']['name'] as $key=>$val)
                     {
+                        //echo "Value: ".$val."\n";
                         move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
                         $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
                         $con->query($qry_add_filename);
@@ -145,7 +146,6 @@
                 }
             }
         ?>
-
         <hr style="border: 2px solid black">
         <h4>My Activities</h4>
         <table class="table mytable">
@@ -222,10 +222,7 @@
                 echo "No Results Found!!";
             }
             ?>
-
-
         <hr style="border: 2px solid black">
-
     </div>
     <!-- Operator Team Code End -->
 <?php include "student_foot.php" ?>
