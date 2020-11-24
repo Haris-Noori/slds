@@ -195,7 +195,6 @@
                                             while($row_get_files = $res_get_files->fetch_assoc())
                                             {
                                                 ?>
-<!--                                                    <li>--><?php //echo " ".$row_get_files["file_name"]." " ?><!--</li>-->
                                                     <a href="doc/<?php echo $_SESSION["student"].'/'.$row_get_files["file_name"] ?>" target="_blank"><?php echo " ".$row_get_files["file_name"]." " ?></a>
                                                 <?php
                                             }

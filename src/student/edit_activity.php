@@ -20,7 +20,7 @@
                 $row = $res->fetch_assoc();
             }
         ?>
-        <form action="edit_activity_try.php" method="POST">
+        <form action="" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     Category Name: <strong><?php echo $row["cat_name"]; ?></strong>
@@ -46,13 +46,118 @@
                     <input name="end_date" value="<?php echo $row["end_date"] ?>" type="date" class="form-control border-dark" id="inputEmail4" placeholder="" >
                 </div>
             </div>
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="">Upload (Images/Certificates/Documents)</label>
+                    <input type="file" name="doc[]" class="btn btn-primary border-dark col-md-12" multiple>
+                </div>
+            </div>
             <input type="number" name="act_id" value="<?php echo $row["act_id"] ?>" hidden>
+
+
+            <!-- Images/Certificates Table -->
+            <hr width="65%" style="border: 2px solid black; margin-left: 0">
+            <h5>My Images/Certificates/Documents</h5>
+            <table class="table col-md-8">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">File Name</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <?php
+
+                    $qry = " SELECT std_id, act_id, file_name FROM files WHERE act_id='".$act_id."' AND std_id = '".$_SESSION["student"]."' ";
+                    $res = $con->query($qry);
+
+                    if($res->num_rows > 0)
+                    {
+                        ?>
+                        <tbody>
+                        <?php
+                        while($row = $res->fetch_assoc())
+                        {
+                            ?>
+                            <tr>
+                                <td><?php echo " ".$row["file_name"]." " ?></td>
+                                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
+                                <td><a href='del_file.php?file_name=<?php echo $row["file_name"] ?>' class="btn btn-danger">Delete</a></td>
+                            </tr>
+                            <?php
+                        }
+                ?>
+                        </tbody>
+                <?php
+                    }
+                    else
+                    {
+                        echo "No Results Found!!";
+                    }
+                ?>
+            </table>
+            <hr width="65%" style="border: 2px solid black; margin-left: 0">
+
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <button type="submit" name="btn_update_activity" class="btn col-md-12 btn-success">Update Activity</button>
                 </div>
             </div>
         </form>
+
+        <?php
+            if(isset($_POST["btn_update_activity"]))
+            {
+                $act_id = $_POST["act_id"];
+                $act_name = $_POST["act_name"];
+                $act_desc = $_POST["act_desc"];
+                $start_date = $_POST["start_date"];
+                $end_date = $_POST["end_date"];
+                $doc = $_POST["doc"];
+
+                $qry_update_act = " UPDATE activity SET act_name='".$act_name."', act_desc='".$act_desc."', start_date='".$start_date."', end_date='".$end_date."' WHERE act_id='".$act_id."' ";
+
+                if($con->query($qry_update_act))
+                {
+                    header("Location:meta_curricular_form.php");
+                }
+                else
+                {
+                    //echo "Not Updated";
+                    header("Location:meta_curricular_form.php");
+                }
+
+                // Query Get Last Act ID
+                $files_act_id = $act_id;
+                //echo "Act_ID: ".$files_act_id."\n";
+
+                $file_path = 'doc/'.$_SESSION["student"];
+                if(file_exists($file_path))
+                {
+                    //echo "Exists";
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
+                else {
+                    //echo "Not exists";
+                    mkdir($file_path);
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        // Moving into folder
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+
+                        // saving file name into database
+                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
+
+            }
+        ?>
 
     </div>
     <!-- Operator Team Code End -->
