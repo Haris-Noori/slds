@@ -84,35 +84,6 @@
         <?php
             if(isset($_POST["btn_add_activity"]))
             {
-                $file_path = 'doc/'.$_SESSION["student"];
-                if(file_exists($file_path))
-                {
-                    //echo "Exists";
-                    foreach($_FILES['doc']['name'] as $key=>$val)
-                    {
-                        /*echo "\nval: ".$val;
-                        echo "\nPath: ".$file_path;
-                        echo "\nComplete Path: ".$file_path.'/'.$val;
-                        echo "<br>";*/
-                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
-                        $qry_add_filename = " INSERT INTO files(std_id, file_name) VALUES('".$_SESSION["student"]."', '".$val."') ";
-                        $con->query($qry_add_filename);
-                    }
-                }
-                else {
-                    //echo "Not exists";
-                    mkdir($file_path);
-                    foreach($_FILES['doc']['name'] as $key=>$val)
-                    {
-                        // Moving into folder
-                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
-
-                        // saving file name into database
-                        $qry_add_filename = " INSERT INTO files(std_id, file_name) VALUES('".$_SESSION["student"]."', '".$val."') ";
-                        $con->query($qry_add_filename);
-                    }
-                }
-
                 $cat_id = $_POST["cat_id"];
                 $act_name = $_POST["act_name"];
                 $act_desc = $_POST["act_desc"];
@@ -140,6 +111,38 @@
                     echo "Not Added :(";
                     //header("Location:meta_curricular_form.php?GoodMessage=$msg");
                 }
+
+                // Query Get Last Act ID
+                $qry_get_act_id = " SELECT act_id FROM activity ORDER BY act_id DESC LIMIT 1 ";
+                $res_get_act_id = $con->query($qry_get_act_id);
+                $row_get_act_id = $res_get_act_id->fetch_assoc();
+                $files_act_id = $row_get_act_id["act_id"];
+                //echo "Act_ID: ".$files_act_id."\n";
+
+                $file_path = 'doc/'.$_SESSION["student"];
+                if(file_exists($file_path))
+                {
+                    //echo "Exists";
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
+                else {
+                    //echo "Not exists";
+                    mkdir($file_path);
+                    foreach($_FILES['doc']['name'] as $key=>$val)
+                    {
+                        // Moving into folder
+                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+
+                        // saving file name into database
+                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                        $con->query($qry_add_filename);
+                    }
+                }
             }
         ?>
 
@@ -153,6 +156,7 @@
                     <th scope="col">Activity Description</th>
                     <th scope="col">Start Date</th>
                     <th scope="col">End Date</th>
+                    <th scope="col">My Files</th>
                     <th scope="col">Action</th>
                     <th scope="col">Action</th>
                 </tr>
@@ -165,63 +169,63 @@
 
             if($res->num_rows > 0)
             {
-            while($row = $res->fetch_assoc())
-            {
-            ?>
-            <tbody>
-                <tr>
-                    <td><?php echo " ".$row["cat_name"]." " ?></td>
-                    <td><?php echo " ".$row["act_name"]." " ?></td>
-                    <td><?php echo " ".$row["act_desc"]." " ?></td>
-                    <td><?php echo " ".$row["start_date"]." " ?></td>
-                    <td><?php echo " ".$row["end_date"]." " ?></td>
-                    <td><a href='edit_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-primary">Edit</a></td>
-                    <td><a href='del_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-danger">Delete</a></td>
-                </tr>
+                ?>
+                <?php
+                while($row = $res->fetch_assoc())
+                {
+
+                    ?>
+                        <tr>
+                            <td><?php echo " ".$row["cat_name"]." " ?></td>
+                            <td><?php echo " ".$row["act_name"]." " ?></td>
+                            <td><?php echo " ".$row["act_desc"]." " ?></td>
+                            <td><?php echo " ".$row["start_date"]." " ?></td>
+                            <td><?php echo " ".$row["end_date"]." " ?></td>
+                            <td>
+                                <?php
+                                $activity_id = $row["act_id"];
+                                //echo "ACT ID: ".$activity_id;
+                                $qry_get_files = " SELECT * FROM files WHERE std_id='".$_SESSION["student"]."' AND act_id='".$activity_id."' ";
+                                $res_get_files = $con->query($qry_get_files);
+
+                                if($res_get_files->num_rows > 0)
+                                {
+                                    ?>
+                                        <?php
+                                            while($row_get_files = $res_get_files->fetch_assoc())
+                                            {
+                                                ?>
+<!--                                                    <li>--><?php //echo " ".$row_get_files["file_name"]." " ?><!--</li>-->
+                                                    <a href="doc/<?php echo $_SESSION["student"].'/'.$row_get_files["file_name"] ?>" target="_blank"><?php echo " ".$row_get_files["file_name"]." " ?></a>
+                                                <?php
+                                            }
+                                        ?>
+                                    <?php
+                                }
+                                else
+                                {
+                                    echo "No Files!!";
+                                }
+                                ?>
+                            </td>
+                            <td><a href='edit_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-primary">Edit</a></td>
+                            <td><a href='del_activity.php?act_id=<?php echo $row["act_id"] ?>' class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    <?php
+                }
+                    ?>
+                    </tbody>
+                </table>
             <?php
             }
+            else
+            {
+                echo "No Results Found!!";
             }
-            else{echo "No Results Found!!";}
-
             ?>
-            </tbody>
-        </table>
+
 
         <hr style="border: 2px solid black">
-        <h4>My Images/Certificates/Documents</h4>
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">File Name</th>
-                <th scope="col">Action</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <?php
-
-            $qry = " SELECT * FROM files WHERE std_id = '".$_SESSION["student"]."' ";
-            $res = $con->query($qry);
-            $result = "";
-
-            if($res->num_rows > 0)
-            {
-            while($row = $res->fetch_assoc())
-            {
-            ?>
-            <tbody>
-            <tr>
-                <td><?php echo " ".$row["file_name"]." " ?></td>
-                <td><a href="doc/<?php echo $_SESSION["student"].'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
-                <td><a href='del_file.php?file_name=<?php echo $row["file_name"] ?>' class="btn btn-danger">Delete</a></td>
-            </tr>
-            <?php
-            }
-            }
-            else{echo "No Results Found!!";}
-
-            ?>
-            </tbody>
-        </table>
 
     </div>
     <!-- Operator Team Code End -->

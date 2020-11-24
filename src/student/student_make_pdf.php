@@ -37,7 +37,7 @@
             <h1 style="color: white " align="center">Meta-Curricular Transcript</h1>
         </div>
         
-        <div class="container mt-4" style="background: lightgray">
+        <div class="container-fluid mt-4" style="background: lightgray">
             <div class="row">
                 <div class="col-sm-4"><span class="font-weight-bold">Student Name: </span>';
                 $html1 .= $row_std["std_name"];
@@ -147,8 +147,8 @@
         $date = date("jS \ F Y");
 
         $html1 .= '
-                <hr class="mb-0" style="border: 10px solid black">
-                <p class="text-center">In Witness there of these signatures confirm the authenticity of this transcript. ';
+                <hr class="mt-5" style="border: 10px solid black">
+                <p class="text-center">In witness there of these signatures confirm the authenticity of this transcript. ';
         $html1 .= $date;
         $html1 .= '</p>';
 
