@@ -48,11 +48,12 @@
                 <th scope="col">Activity Description</th>
                 <th scope="col">Start Date</th>
                 <th scope="col">End Date</th>
+                <th scope="col">Files</th>
             </tr>
             </thead>
             <?php
 
-                $qry = " SELECT cat_name, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$std_id."' ";
+                $qry = " SELECT cat_name, act_id, act_name, act_desc, start_date, end_date FROM category,activity WHERE category.cat_id=activity.cat_id AND std_id = '".$std_id."' ";
                 $res = $con->query($qry);
                 $result = "";
 
@@ -68,6 +69,32 @@
                 <td><?php echo " ".$row["act_desc"]." " ?></td>
                 <td><?php echo " ".$row["start_date"]." " ?></td>
                 <td><?php echo " ".$row["end_date"]." " ?></td>
+                <td>
+                    <?php
+                    $activity_id = $row["act_id"];
+                    //echo "ACT ID: ".$activity_id;
+                    $qry_get_files = " SELECT * FROM files WHERE std_id='".$_SESSION["student"]."' AND act_id='".$activity_id."' ";
+                    $res_get_files = $con->query($qry_get_files);
+
+                    if($res_get_files->num_rows > 0)
+                    {
+                        ?>
+                        <?php
+                        while($row_get_files = $res_get_files->fetch_assoc())
+                        {
+                            ?>
+                            <a href="../student/doc/<?php echo $_SESSION["student"].'/'.$row_get_files["file_name"] ?>" target="_blank"><?php echo " ".$row_get_files["file_name"]." " ?></a>
+                            <?php
+                        }
+                        ?>
+                        <?php
+                    }
+                    else
+                    {
+                        echo "No Files!!";
+                    }
+                    ?>
+                </td>
             </tr>
 
             <?php
@@ -82,39 +109,6 @@
 
 
         <hr style="border: 2px solid black">
-        <h4>Student Images/Certificates/Documents</h4>
-        <table class="table">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">File Name</th>
-                <th scope="col">Action</th>
-            </tr>
-            </thead>
-            <?php
-
-                $qry = " SELECT * FROM files WHERE std_id = '".$std_id."' ";
-                $res = $con->query($qry);
-                $result = "";
-
-                if($res->num_rows > 0)
-                {
-                    while($row = $res->fetch_assoc())
-                    {
-            ?>
-            <tbody>
-            <tr>
-                <td><?php echo " ".$row["file_name"]." " ?></td>
-                <td><a href="../student/doc/<?php echo $std_id.'/'.$row["file_name"] ?>" target="_blank" class="btn btn-primary">View</a></td>
-            </tr>
-            <?php
-                    }
-                }
-                else{
-                    echo "No Results Found!!";
-                }
-            ?>
-            </tbody>
-        </table>
 
         <!-- Approve/Disapprove Buttons -->
         <div class="row mb-3">
