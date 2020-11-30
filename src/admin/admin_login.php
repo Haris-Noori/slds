@@ -23,16 +23,12 @@
 
 <body>
 
-    <nav class="navbar mynav" style="background: white">
-        <div class="mydiv" style="background: white">
-            <a id="techvalley" href="../../index.php">
-                <img src="../../img/habbib.jpg">
-            </a>
-            <ul>
-                <li><a class="text-black-50" href="../../index.php">Home</a></li>
-            </ul>
+    <nav class="mt-4 navbar mynav" style="background: white; align-content: center" >
+        <div class="mydiv" style="margin-top: -35px; margin-left: 36%">
+            <center>
+                <a href="../../index.php"><img width="315" style="align-content: center; float: right" src="../../img/new.png"></a>
+            </center>
         </div>
-
     </nav>
     <!--PAGE CONTENT STARTS-->
     <div class="container mcontainer">

@@ -1,24 +1,26 @@
 <?php
     include "../connect.php";
 
-    if(isset($_GET["a_std_id"]))
+    if(isset($_POST["btn-approve"]))
     {
-        $std_id = $_GET["a_std_id"];
+        $std_id = $_POST["std_id"];
         $qry_update_status = " UPDATE transcript SET status='approved' WHERE std_id='".$std_id."' ";
         if($con->query($qry_update_status))
         {
-            $msg = "Tutor Removed !!";
+            $msg = "Approved!";
             header("Location:transcript_requests.php");
         }
     }
 
-    if(isset($_GET["d_std_id"]))
+    if(isset($_POST["btn-disapprove"]))
     {
-        $std_id = $_GET["d_std_id"];
-        $qry_update_status = " UPDATE transcript SET status='disapproved' WHERE std_id='".$std_id."' ";
+        $std_id = $_POST["std_id"];
+        $message = $_POST["message"];
+
+        $qry_update_status = " UPDATE transcript SET status='disapproved', message='".$message."' WHERE std_id='".$std_id."' ";
         if($con->query($qry_update_status))
         {
-            $msg = "Tutor Removed !!";
+            $msg = " Disapproved!";
             header("Location:transcript_requests.php");
         }
     }

@@ -35,10 +35,11 @@
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">
+            <div class="sidebar-heading" style="padding: 0; margin: 0">
                 <a class="navbar-brand" href="admin_dashboard.php">
-                    <img src="../../img/habib-logo.jpg" width="180" alt="">
-                </a> </div>
+                    <img src="../../img/new.png" width="200" alt="" style="margin-top: -10px">
+                </a>
+            </div>
             <div class="list-group list-group-flush font-weight-bold">
                 <a href="add_category.php" class="list-group-item list-group-item-action bg-light">Categories</a>
                 <a href="show_student.php" class="list-group-item list-group-item-action bg-light">Show Student</a>

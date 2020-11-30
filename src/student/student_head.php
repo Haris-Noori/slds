@@ -35,7 +35,7 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading" style="padding: 0; margin: 0">
                 <a class="navbar-brand" href="student_dashboard.php">
-                    <img src="../../img/new.png" width="200" alt="" >
+                    <img src="../../img/new.png" width="200" alt="" style="margin-top: -10px">
                 </a>
             </div>
             <div class="list-group list-group-flush font-weight-bold">

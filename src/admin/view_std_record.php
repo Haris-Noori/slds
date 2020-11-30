@@ -119,8 +119,17 @@
         <!-- Approve/Disapprove Buttons -->
         <div class="row mb-3">
             <div class="container">
-                <a href='modify_std_status.php?a_std_id=<?php echo $std_id ?>'><button class="btn btn-success">Approve</button></a>
-                <a href='modify_std_status.php?d_std_id=<?php echo $std_id ?>'><button class="btn btn-danger">Disapprove</button></a>
+                <form action="modify_std_status.php" method="POST">
+                    <div class="form-row">
+                        <input name="std_id" value="<?php echo $std_id ?>" hidden>
+                        <a><button type="submit" name="btn-approve" class="btn btn-success">Approve</button></a>
+                    </div>
+                    <div class="form-row mt-3">
+                        <label for="" class="text-dark">Type Message :</label>
+                        <input name="message" id="inputEmail4" class="col-md-6 ml-2">
+                        <button type="submit" name="btn-disapprove" class="btn btn-danger col-md-2 ml-2">Disapprove</button>
+                    </div>
+                </form>
             </div>
         </div>
 
