@@ -14,15 +14,16 @@
     $row_std = $res_std->fetch_assoc();
 
     $html1 = '
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+    <!DOCTYPE html>
+    <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-4" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-4">
+        
         <title>PDF FILE</title>
         
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../css/student_header.css">
-        
         <!--FONT LINK-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -30,43 +31,75 @@
             body {
                 font-family: "Poppins", sans-serif;
             }
+            
+            .customRow
+            {
+                /*border: 1px dotted black;*/
+		        margin: 10px 0;
+		        align-content: center;
+		        /*text-align: center;*/
+            }
+            
+            .customCols
+            {
+                padding: 10px;
+               /* border: 1px solid red;*/
+                text-align: center;
+                align-content: center;
+            }
+            
+            .myRows
+            {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                padding: 5px;
+                /*text-align: center;*/
+                margin-right: 10px;
+                border: 2px dotted black;
+            }
+            
+            .myCols
+            {
+                padding: 20px;
+                border: 1px solid purple;
+            }
+           
         </style>
     </head>
     <body>
-        <div class="container" style="background: purple">
-            <h1 style="color: white " align="center">Meta-Curricular Transcript</h1>
+        <div class="container" style="width: 500px; height: 35px; text-align: center">
+            <img src="../../img/new.png" width="100%" alt="">
+            <h1 style="color: white; font-size: 28px; background: purple;" >Meta-Curricular Transcript</h1>
         </div>
         
         <div class="container-fluid mt-4" style="background: lightgray">
-            <div class="row">
-                <div class="col-sm-4"><span class="font-weight-bold">Student Name: </span>';
+            <div class="customRow">
+                <span class="customCols">Student Name: <strong>';
                 $html1 .= $row_std["std_name"];
-                $html1 .=  '</div>
-                <div class="col-sm-4" style="font-weight: bolder">Student ID: ';
+                $html1 .= '</strong></span><span style="visibility: hidden">.....................</span>
+                <span class="customCols">Student ID: ';
                 $html1 .= $row_std["std_id"];
-                $html1 .= '</div>
-                <div class="col">Academic Program: ';
+                $html1 .= '</span><span style="visibility: hidden">................</span>
+                <span class="customCols">Academic Program: ';
                 $html1 .= $row_std["std_program"];
-                $html1 .= '</div>
+                $html1 .= '</span>
             </div>
-            <div class="row">
-                <div class="col">Email: ';
+            <div class="customRow">
+                <span class="customCols">Email: ';
                 $html1 .= $row_std["std_email"];
-                $html1 .= '</div>
-                <div class="col">Phone Number: ';
+                $html1 .= '</span><span style="visibility: hidden">.....</span>
+                <span class="customCols">Phone Number: ';
                 $html1 .= $row_std["std_phone"];
-                $html1 .= '</div>
-                <div class="col">Induction Year: ';
+                $html1 .= '</span><span style="visibility: hidden">..</span>
+                <span class="customCols">Induction Year: ';
                 $html1 .= $row_std["std_ind_year"];
-                $html1 .= '</div>
+                $html1 .= '</span>
             </div>    
         </div>
-           
     ';
 
 
-
-    $pdf->Image('../../img/habbib.jpg',25,10,150,50);
+    /*$pdf->Image('../../img/new.png',25,10,150,65);*/
     //$pdf->WriteHTML($html1);
 
     $qry1 = "SELECT * FROM category";
@@ -152,9 +185,27 @@
         $html1 .= $date;
         $html1 .= '</p>';
 
-        $html1 .= '<p>
-
-</p>';
+        $html1 .= '
+                <div class="row">
+                    <img src="../../img/sign1.png" width="150" alt="">
+                    <img src="../../img/sign2.png" width="150" alt="">
+                    <img src="../../img/sign3.png" width="150" alt="">
+                    <img src="../../img/sign4.png" width="150" alt="">
+                </div>
+                <div class="myRows">
+                    <span class="myCols">Bilal Ali</span>
+                    <span class="myCols">Syed Mushtaq</span>
+                    <span class="myCols">Shamez Mukhi</span>
+                    <span class="myCols">Sadiq Sheikh</span>
+                </div>
+                <div class="myRows">
+                    <span class="myCols">President</span>
+                    <span class="myCols">Vice President</span>
+                    <span class="myCols">Director Student Life</span>
+                    <span class="myCols">Manager Student Affairs</span>
+                </div>
+                
+                ';
 
         $html1 .='</body>
                 </html>';
@@ -162,5 +213,3 @@
     $pdf->WriteHTML($html1);
 
     $pdf->Output() ;
-
-?>

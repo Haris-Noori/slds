@@ -32,7 +32,7 @@
                     {
                         echo "<p>Your transcript request is <span class='text-success'>approved!</span> 😀</p>";
                         ?>
-                        <div><a href='student_make_pdf.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-success text-white">Download Transcript</a></div>
+                        <div><a href='new_pdf.php?std_id=<?php echo $_SESSION["student"] ?>' class="btn btn-success text-white">Download Transcript</a></div>
                         <?php
                     }
                     if($row["status"] == 'disapproved')
