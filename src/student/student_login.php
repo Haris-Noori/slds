@@ -26,10 +26,10 @@
 
 
     <nav class="mt-4 navbar mynav" style="background: white; align-content: center" >
-        <div class="mydiv" style="margin-top: -35px; margin-left: 36%">
-            <center>
-                <a href="../../index.php"><img width="315" style="align-content: center; float: right" src="../../img/new.png"></a>
-            </center>
+        <div class="mydiv text-center">
+            <a href="../../index.php">
+                <img width="315" style="margin-top: -35px" src="../../img/new.png">
+            </a>
         </div>
     </nav>
     <!--PAGE CONTENT STARTS-->
