@@ -103,7 +103,7 @@
 
                 if($con->query($qry_add_act))
                 {
-                    echo "New Activity Added!!";
+                    echo "New Activity Added!\n";
                     //header("Location:meta_curricular_form.php?GoodMessage=$msg");
                 }
                 else
@@ -126,9 +126,18 @@
                     foreach($_FILES['doc']['name'] as $key=>$val)
                     {
                         //echo "Value: ".$val."\n";
-                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
-                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
-                        $con->query($qry_add_filename);
+
+                        if(empty($val))
+                        {
+                            echo "No Files Selected!\n";
+                        }
+                        else
+                        {
+                            move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+                            $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                            $con->query($qry_add_filename);
+                        }
+
                     }
                 }
                 else {
@@ -136,12 +145,20 @@
                     mkdir($file_path);
                     foreach($_FILES['doc']['name'] as $key=>$val)
                     {
-                        // Moving into folder
-                        move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
 
-                        // saving file name into database
-                        $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
-                        $con->query($qry_add_filename);
+                        if(empty($val))
+                        {
+                            echo "No Files Selected!\n";
+                        }
+                        else
+                        {
+                            // Moving into folder
+                            move_uploaded_file($_FILES['doc']['tmp_name'][$key], $file_path.'/'.$val);
+
+                            // saving file name into database
+                            $qry_add_filename = " INSERT INTO files(std_id, act_id, file_name) VALUES('".$_SESSION["student"]."', '".$files_act_id."', '".$val."') ";
+                            $con->query($qry_add_filename);
+                        }
                     }
                 }
             }

@@ -36,13 +36,13 @@
 
     <div class="container" style="background: lightgray; margin-top: 40px">
         <div class="row p-1">
-            <div class="col text-left">Student Name: <strong><?php echo $row_std["std_name"] ?></strong></div>
-            <div class="col text-center">Student ID: <strong><?php echo $row_std["std_id"] ?></strong></div>
+            <div class="col-5 text-left">Student Name: <strong><?php echo $row_std["std_name"] ?></strong></div>
+            <div class="col text-left">Student ID: <strong><?php echo $row_std["std_id"] ?></strong></div>
             <div class="col text-left">Academic Program: <strong><?php echo $row_std["std_program"] ?></strong></div>
         </div>
         <div class="row p-1">
-            <div class="col text-left">Student Email: <strong><?php echo $row_std["std_email"] ?></strong> </div>
-            <div class="col text-center">Phone Number: <strong><?php echo $row_std["std_phone"] ?></strong> </div>
+            <div class="col-5 text-left">Student Email: <strong><?php echo $row_std["std_email"] ?></strong> </div>
+            <div class="col text-left">Phone: <strong><?php echo $row_std["std_phone"] ?></strong> </div>
             <div class="col text-left">Induction Year: <strong><?php echo $row_std["std_ind_year"] ?></strong> </div>
         </div>
     </div>
@@ -121,7 +121,7 @@
                 <div class="col text-center"> <img src="../../img/sign1.png" width="150" alt=""> </div>
                 <div class="col text-center"> <img src="../../img/sign2.png" width="150" alt=""> </div>
                 <div class="col text-center"> <img src="../../img/sign3.png" width="150" alt=""> </div>
-                <div class="col text-center"> <img src="../../img/sign4.png" width="150" alt=""> </div>
+                <div class="col text-center"> <img src="../../img/sign6.png" width="150" alt=""> </div>
             </div>
             <div class="row">
                 <div class="col text-center">Bilal Ali</div>
