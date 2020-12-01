@@ -25,10 +25,10 @@
 <body>
 
 
-    <nav class="mt-4 navbar mynav" style="background: white; align-content: center" >
-        <div class="mydiv text-center">
-            <a href="../../index.php">
-                <img width="315" style="margin-top: -35px" src="../../img/new.png">
+    <nav class="navbar mt-4" style="background: white; align-content: center" >
+        <div class="container text-center">
+            <a href="../../index.php" style="margin-left: 35%">
+                <img width="315px" style="margin-top: -35px" src="../../img/new.png">
             </a>
         </div>
     </nav>

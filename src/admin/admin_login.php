@@ -23,10 +23,10 @@
 
 <body>
 
-    <nav class="mt-4 navbar mynav align-content-center" style="background: white">
-        <div class="mydiv text-center">
-                <a href="../../index.php">
-                    <img width="315" style="margin-top: -35px" src="../../img/new.png">
+    <nav class="navbar mt-4 align-content-center" style="background: white">
+        <div class="container text-center">
+                <a href="../../index.php" style="margin-left: 35%">
+                    <img width="315px" style="margin-top: -35px" src="../../img/new.png">
                 </a>
         </div>
     </nav>
@@ -50,7 +50,7 @@
                 </div>
                 <br>
                 <div class="form group-row">
-                    <button type="submit" class="form-control btn btn-success border-dark col-sm-4 text-white"><strong>Login</strong></button>
+                    <button type="submit" class="form-control btn btn-success col-sm-4 text-white"><strong>Login</strong></button>
                 </div>
                 <br>
                 <div class="form group-row">

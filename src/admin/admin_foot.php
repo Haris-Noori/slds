@@ -3,7 +3,7 @@
 
     </div>
 
-    <footer class="foot" style="background: #020002">
+    <footer class="foot" style="background: purple">
         <div class="row align-center copyright">
             <div class="col-sm-12" align="center" style="color:whitesmoke">
                 <br>

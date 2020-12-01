@@ -22,7 +22,7 @@
                         <ul>
                             <li>On your left there is a Admin Panel.</li>
                             <li>You can hide or view the panel by clicking on the Admin Panel button on the navigation bar.</li>
-                            <li>Click on your name at the top-right of the navigation bar to change your password or logout.</li>
+                            <li>Click on your ID at the top-right of the navigation bar to change your password or logout.</li>
                         </ul>
                     </div>
                 </div>
