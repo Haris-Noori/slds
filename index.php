@@ -30,20 +30,19 @@
 
 <body>
 
-    <nav class="mt-4 navbar mynav align-content-center">
+    <nav class="mt-4 navbar mynav align-content-center text-center">
         <div class="mydiv">
-            <center>
-            <img width="350px" style="align-content: center" src="img/new.png">
-            </center>
+            <img width="350" style="align-content: center" src="img/new.png">
+            <h1 class="font-weight-bold">Meta-Curricular Portal</h1>
         </div>
     </nav>
 
     <div class="mt-5 container mcontainer">
         <div class="row main-card">
 
-            <div class="col-sm-6 col-md-4 cards" id="card1" >
-                <div class="card" style="width: 18rem ; border: 4px solid black">
-                    <img  src="img/admin1.jpg" class="card-img-top" alt="...">
+            <div class="col-sm-6 col-md-4 cards" id="card1" style="margin-top: 15px">
+                <div class="card" style="width: 17rem ; border: 4px solid black">
+                    <img  src="img/admin1.jpg" class="card-img-top" style="height: 200px; width: 100%" alt="...">
                     <div class="card-body font-weight-bold" style="background: lightgrey">
                         <h5 class="card-title font-weight-bold">Admin Login</h5>
                         <p class="card-text">This is for admins only</p>
@@ -52,9 +51,9 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4 cards" id="card2">
-                <div class="card" style="width: 18rem; border: 4px solid black" >
-                    <img height="260" src="img/59983.jpg" class="card-img-top" alt="...">
+            <div class="col-sm-6 col-md-4 cards" id="card2" style="margin-top: 15px">
+                <div class="card" style="width: 17rem; border: 4px solid black" >
+                    <img height="260" src="img/59983.jpg" class="card-img-top" style="height: 200px; width: 250px" alt="...">
                     <div class="card-body font-weight-bold" style="background: lightgrey"  >
                         <h5 class="card-title font-weight-bold" >Student Login</h5>
                         <p class="card-text font-weight-bold">This is for students only</p>
