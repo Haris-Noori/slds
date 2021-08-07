@@ -1,9 +1,9 @@
 <?php
 
     $server = "localhost";
-    $user = "root";
-    $pass = "";
-    $dbname = "slds_db";
+    $user = "id16552365_root";
+    $pass = "6-dXA)oJ>g}efP3h";
+    $dbname = "id16552365_slds_db";
 
     $con = new MySQLi($server, $user, $pass, $dbname);
 

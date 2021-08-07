@@ -1,4 +1,9 @@
-<?php include "../connect.php"; ?>
+<?php include "../connect.php";
+    if(!isset($_SESSION["student"]))
+    { //if login in session is not set
+        header("Location:../../index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 

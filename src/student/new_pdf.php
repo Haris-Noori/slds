@@ -1,5 +1,10 @@
 <?php
     include "../connect.php";
+    session_start();
+    if(!isset($_SESSION["student"]))
+    { //if login in session is not set
+        header("Location:../../index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +24,7 @@
 </head>
 <body style="border: 5px solid purple; margin: 10px">
 <?php
-    session_start();
+    //session_start();
     $std_id = $_GET["std_id"];
 
     //echo "ID: ".$_SESSION["student"];

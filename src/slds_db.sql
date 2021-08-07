@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2020 at 04:19 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Apr 08, 2021 at 09:18 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `slds_db`
+-- Database: `slds`
 --
 
 -- --------------------------------------------------------
@@ -43,18 +42,11 @@ CREATE TABLE `activity` (
 --
 
 INSERT INTO `activity` (`act_id`, `cat_id`, `std_id`, `act_name`, `act_desc`, `start_date`, `end_date`) VALUES
-(1, 1, 1, 'Team Head', 'Web & IT Team Head - NUCES ACM', '2019-10-01', '2021-05-16'),
-(2, 1, 2, 'Team Head', 'Web & IT Team Head - NUCES ACM', '2019-10-01', '2021-05-16'),
-(22, 3, 2, 'Team lead', 'Web & IT Team Head - NUCES ACM', '2019-10-01', '2021-05-16'),
-(87, 3, 1, 'Futsal Player', 'Participated in Sports Week 2020', '2020-11-02', '2020-11-06'),
-(88, 6, 1, 'Blogging', 'My Website on imharis.wordpress.com', '2019-11-24', '2020-11-30'),
-(89, 6, 1, 'Software Developed', 'Doomsday 2019', '2020-11-02', '2020-11-07'),
-(90, 11, 1, 'Test Activity', 'Test Description', '2020-11-16', '2020-11-15'),
-(91, 1, 1, 'Git Workshop', 'NUCES ACM Workshop', '2020-11-12', '2020-11-13'),
-(94, 2, 1, 'Test 23kdckdcn', 'Desc changed', '2020-11-05', '2020-11-24'),
-(95, 1, 1, 'Test Activity', 'Test Passed', '2020-11-07', '2020-11-24'),
-(96, 1, 3, 'Graphic', 'NUCES ACM Graphic Designing Team', '2020-11-01', '2020-11-30'),
-(98, 15, 2, 'Student Chairperson', 'Student Life Department', '2020-11-17', '2020-11-27');
+(124, 4, 1209, 'Voluntary service', 'Volunteered at Dar-ul-sukoon (orphanage for differently abled individuals) for 18 days.', '2018-01-01', '2018-01-18'),
+(126, 3, 1209, 'Badminton', 'Under 19 national badminton player.', '2021-03-06', '2021-03-03'),
+(127, 5, 1209, 'Virtual Internship', 'Virtual internship at Aga Khan Foundation', '2020-12-01', '2020-12-20'),
+(128, 1, 1209, 'Residential Captain', 'Residential Captain of Nzoia House', '2020-04-01', '2021-04-01'),
+(130, 2, 7612, 'Internship', 'Residential Captain of Nzoia House', '2021-04-01', '2021-04-09');
 
 -- --------------------------------------------------------
 
@@ -72,7 +64,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_password`) VALUES
-(1, 'admin');
+(98, 'admin.098'),
+(765, 'X.765x'),
+(2324, 'Robert_Adminpassword1');
 
 -- --------------------------------------------------------
 
@@ -93,11 +87,11 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 (1, 'Student Leadership'),
 (2, 'Global Engagement'),
 (3, 'Sports & Recreation'),
-(14, 'Community/Voluntary Services'),
-(15, 'Career Development'),
-(16, 'Publication/Creative Activity'),
-(17, 'Awards & Scholarships'),
-(19, 'Others');
+(4, 'Community/ Voluntary Services'),
+(5, 'Career Development'),
+(6, 'Publication/ Creative Activity'),
+(7, 'Awards & Scholarships'),
+(8, 'Others');
 
 -- --------------------------------------------------------
 
@@ -116,11 +110,8 @@ CREATE TABLE `files` (
 --
 
 INSERT INTO `files` (`std_id`, `act_id`, `file_name`) VALUES
-(1, 95, 'Octocat.png'),
-(1, 94, 'TortoiseCVS_Logo.png'),
-(1, 94, 'mercurial_logo.png'),
-(1, 94, 'GIT.png'),
-(2, 22, 'pp.jpg');
+(1209, 124, 'img_20151103_105030.jpg'),
+(1209, 126, 'Badminton.jpg');
 
 -- --------------------------------------------------------
 
@@ -143,10 +134,9 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`std_id`, `std_password`, `std_name`, `std_email`, `std_ind_year`, `std_phone`, `std_program`) VALUES
-(1, 'student', 'M.Haris Noori', 'harisnoori20@gmail.com', 2018, '+92 310 562 5584', 'BSCS'),
-(2, '12345', 'Salihah Shamez', 'salihah@gamil.com', 2019, '+47 012 789 3456', 'BSIT'),
-(3, 'c3qwerty', 'Haider Tamsil', 'haidertamsil98@yahoo.com', 2017, '0336 9190 377', 'BSCS'),
-(4, '123', 'Mubariz Khan', 'mubariz@gmail.com', 2018, '444578954613', 'BSCS');
+(1209, 'Alice_password@1', 'Alice Steve', 'Alice.steve@gmail.com', 2018, '+92 335 332 7523', 'Bachelors of Arts'),
+(7612, 'Sasha_Ali2021', NULL, NULL, NULL, NULL, NULL),
+(45678, 'HUStudent.2021', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -165,7 +155,8 @@ CREATE TABLE `transcript` (
 --
 
 INSERT INTO `transcript` (`std_id`, `status`, `message`) VALUES
-(2, 'approved', 'Pay Your dues first');
+(7612, 'approved', ''),
+(1209, 'approved', '');
 
 --
 -- Indexes for dumped tables
@@ -218,25 +209,25 @@ ALTER TABLE `transcript`
 -- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `act_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `act_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2325;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `std_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45679;
 
 --
 -- Constraints for dumped tables

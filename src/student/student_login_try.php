@@ -11,7 +11,7 @@
     // ----------------------- check if query working
     if($con->query($qry))
     {
-        echo "Query run success"; 
+        //echo "Query run success"; 
     }
     else
     {

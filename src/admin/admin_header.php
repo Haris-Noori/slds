@@ -1,14 +1,12 @@
-<?php
-    session_start();
+<?php 
+    // session_start();
     if(!isset($_SESSION["admin"]))
     { //if login in session is not set
         header("Location:../../index.php");
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +26,6 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Image and text -->
     <div class="d-flex" id="wrapper">
@@ -68,7 +65,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white font-weight-bolder" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $_SESSION["admin"]; ?>
+                                <?php echo $_SESSION["admin"] ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="admin_change_pass.php">Change Password</a>

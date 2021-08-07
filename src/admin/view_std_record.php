@@ -1,4 +1,10 @@
-<?php include "../connect.php" ?>
+<?php include "../connect.php";
+    session_start();
+    if(!isset($_SESSION["admin"]))
+    { //if login in session is not set
+        header("Location:../../index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,7 +79,7 @@
                     <?php
                     $activity_id = $row["act_id"];
                     //echo "ACT ID: ".$activity_id;
-                    $qry_get_files = " SELECT * FROM files WHERE std_id='".$_SESSION["student"]."' AND act_id='".$activity_id."' ";
+                    $qry_get_files = " SELECT * FROM files WHERE std_id='".$std_id."' AND act_id='".$activity_id."' ";
                     $res_get_files = $con->query($qry_get_files);
 
                     if($res_get_files->num_rows > 0)
@@ -83,7 +89,7 @@
                         while($row_get_files = $res_get_files->fetch_assoc())
                         {
                             ?>
-                            <a href="../student/doc/<?php echo $_SESSION["student"].'/'.$row_get_files["file_name"] ?>" target="_blank"><?php echo " ".$row_get_files["file_name"]." " ?></a>
+                            <a href="../student/doc/<?php echo $std_id.'/'.$row_get_files["file_name"] ?>" target="_blank"><?php echo " ".$row_get_files["file_name"]." " ?></a>
                             <?php
                         }
                         ?>

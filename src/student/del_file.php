@@ -8,7 +8,7 @@
         $act_id = $_GET["act_id"];
 
         // Deleting File From File System
-        $path = $_SERVER['DOCUMENT_ROOT'].'/SLDS/src/student/doc/'.$_SESSION["student"].'/'.$file_name;
+        $path = $_SERVER['DOCUMENT_ROOT'].'/src/student/doc/'.$_SESSION["student"].'/'.$file_name;
         unlink($path);
 
         // Deleting File Name From Database

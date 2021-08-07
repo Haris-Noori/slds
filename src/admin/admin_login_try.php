@@ -11,7 +11,7 @@
     // ----------------------- check if query working
     if($con->query($qry))
     {
-        echo "Query run success"; 
+        //echo "Query run success"; 
     }
     else
     {
@@ -30,7 +30,7 @@
         if($row["admin_password"] == $admin_pass)
         {   //password is correct
             $_SESSION["admin"] = $admin_id;
-            //echo $SESSION["user"];
+            //echo $SESSION["admin"];
             header("Location:admin_dashboard.php");    //give admin the access to dashboard
         }
         else
