@@ -8,6 +8,7 @@ int main(){
     cout<<"hey"<<endl;
     // -----------------------hey----------------------------
     cout<<"It is confirmed that I have made the changes"<<endl;
+    cout<"GG"<<endl;
     getch();
     return 0;
 } 
